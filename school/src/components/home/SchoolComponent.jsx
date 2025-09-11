@@ -7,17 +7,15 @@ const SchoolComponent = () => {
   const testimonials = [
     {
       id: 1,
-      quote: "Our graduates have earned admission into most universities.",
+      quote: "Our graduates have earned admission in universites.",
     },
     {
       id: 2,
-      quote:
-        "The guidance I received at HQA was instrumental in my acceptance to Stanford.",
+      quote: "The guidance I received at HQA was instrumental.",
     },
     {
       id: 3,
-      quote:
-        "The science program at HQA gave me the foundation I needed for MIT.",
+      quote: "The science program at HQA.",
     },
   ];
 

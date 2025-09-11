@@ -52,7 +52,7 @@ const NewJourney = () => {
             alt="New Journey"
             loading="lazy"
             decoding="async"
-            className="w-full h-56 min-[480px]:h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[450px] object-cover"
+            className="w-full h-56 min-[480px]:h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[550px] object-cover"
           />
 
           {/* Overlay Play Button */}

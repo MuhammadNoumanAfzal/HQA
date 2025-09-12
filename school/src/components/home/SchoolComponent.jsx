@@ -1,118 +1,232 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const SchoolComponent = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+const slides = [
+  {
+    id: 1,
+    image: "/slider.jpg",
+    numberImg: "/001.png",
+    title:
+      "Imagine a School Where Graduates Excel at the Nation's Most Prestigious Universities",
+    description:
+      "At Houston Quran Academy, we go beyond preparing students for graduation — we empower them to achieve greatness.",
+    quote: "Our graduates have earned admission in universities.",
+  },
+  {
+    id: 2,
+    image: "/slider.jpg",
+    numberImg: "/001.png",
+    title: "Building Leaders of Tomorrow",
+    description:
+      "Our unique curriculum combines modern education with Islamic values to shape well-rounded individuals.",
+    quote: "We prepare students to excel both academically and spiritually.",
+  },
+  {
+    id: 3,
+    image: "/slider.jpg",
+    numberImg: "/001.png",
+    title: "Empowering Through Knowledge",
+    description:
+      "Our students gain the skills, confidence, and character to succeed in life and serve their communities.",
+    quote: "Education is the foundation of empowerment.",
+  },
+];
 
-  const testimonials = [
-    {
-      id: 1,
-      quote: "Our graduates have earned admission in universites.",
-    },
-    {
-      id: 2,
-      quote: "The guidance I received at HQA was instrumental.",
-    },
-    {
-      id: 3,
-      quote: "The science program at HQA.",
-    },
-  ];
+export default function ResponsiveSlider() {
+  const [current, setCurrent] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
 
-  const nextSlide = () =>
-    setCurrentSlide((prev) =>
-      prev === testimonials.length - 1 ? 0 : prev + 1
-    );
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
 
-  const prevSlide = () =>
-    setCurrentSlide((prev) =>
-      prev === 0 ? testimonials.length - 1 : prev - 1
-    );
+  const nextSlide = () => {
+    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
+
+  // --- Swipe Handlers ---
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const minSwipe = 50;
+
+    if (distance > minSwipe) {
+      // swipe left
+      nextSlide();
+    } else if (distance < -minSwipe) {
+      // swipe right
+      prevSlide();
+    }
+
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
 
   return (
-    <section className="py-16 bg-white font-serif">
-      <div className="px-4 sm:px-6 lg:px-8">
-        {/* Heading */}
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-indigo-900 mb-8 italic text-center lg:text-left">
-          From HQA to <span className="text-red-600">Higher Ground</span>
-        </h1>
+    <section
+      className="w-full bg-white py-12 px-4 sm:px-8 lg:px-16 font-serif"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      {/* Heading */}
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 lg:text-left font-serif">
+        <span className="text-[#0F2C56] font-serif">From HQA to </span>
+        <span className="text-[#C0392B] italic">Higher Ground</span>
+      </h2>
 
-        {/* Flex layout */}
-        <div className="flex flex-col lg:flex-row items-center gap-10">
-          {/* Left Image */}
-          <div className="w-full lg:w-1/2">
-            <div className="rounded-xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+      {/* Mobile Layout (top to bottom): Top Card -> Image -> Quote Slider */}
+      <div className="lg:hidden flex flex-col gap-6">
+        {/* Top Card */}
+        <div className="bg-[#0E2954] text-white p-6 rounded-xl shadow-md">
+          <h3 className="text-lg sm:text-xl font-bold mb-2">
+            {slides[current].title}
+          </h3>
+          <p className="text-sm sm:text-base">{slides[current].description}</p>
+        </div>
+
+        {/* Image (centered) */}
+        <div className="w-full relative flex justify-center">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={slides[current].id}
+              src={slides[current].image}
+              alt={slides[current].title}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 50 }}
+              transition={{ duration: 0.6 }}
+              className="w-full max-w-md h-72 sm:h-80 md:h-96 object-cover rounded-xl shadow-md"
+            />
+          </AnimatePresence>
+        </div>
+
+        {/* Quote Slider */}
+        <div className="bg-white border border-gray-200 rounded-xl shadow-md p-6 flex flex-col justify-between">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={slides[current].quote}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.6 }}
+              className="flex items-center gap-4 mb-4"
+            >
+              {/* Slide Number Image on Left */}
               <img
-                src="/slider.jpg"
-                alt="Students at Houston Quran Academy"
-                className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                src={slides[current].numberImg}
+                alt={`Slide ${slides[current].id}`}
+                className="w-16 h-22"
               />
-            </div>
+
+              {/* Quote Text */}
+              <p className="italic text-gray-700 text-sm sm:text-base">
+                "{slides[current].quote}"
+              </p>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Navigation Buttons */}
+          <div className="flex justify-end gap-4">
+            <button
+              onClick={prevSlide}
+              className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-red-700 text-red-700 hover:bg-red-700 transition"
+            >
+              <FaArrowLeft />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-red-600 text-white hover:bg-red-700 transition"
+            >
+              <FaArrowRight />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Layout (unchanged) */}
+      <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        {/* Left: Image */}
+        <div className="w-full relative order-1 lg:order-1">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={slides[current].id}
+              src={slides[current].image}
+              alt={slides[current].title}
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 50 }}
+              transition={{ duration: 0.6 }}
+              className="w-full h-72 sm:h-80 md:h-96 object-cover rounded-xl shadow-md"
+            />
+          </AnimatePresence>
+        </div>
+
+        {/* Right: Cards (stacked) */}
+        <div className="flex flex-col justify-between gap-6 order-2 lg:order-2">
+          {/* Top Card */}
+          <div className="bg-[#0E2954] text-white p-6 rounded-xl shadow-md">
+            <h3 className="text-lg sm:text-xl font-bold mb-2">
+              {slides[current].title}
+            </h3>
+            <p className="text-sm sm:text-base">
+              {slides[current].description}
+            </p>
           </div>
 
-          {/* Right Cards */}
-          <div className="w-full lg:w-1/2 flex flex-col gap-6">
-            {/* Info Card */}
-            <div className="bg-[#00285E] text-white rounded-xl shadow-lg p-6">
-              <p className="text-sm sm:text-base md:text-lg">
-                Imagine a School Where Graduates Excel at the Nation’s Most
-                Prestigious Universities
-              </p>
-              <p className="mt-2 text-sm sm:text-base md:text-lg">
-                At Houston Quran Academy, we go beyond preparing students for
-                graduation — we empower them to achieve greatness.
-              </p>
-            </div>
+          {/* Bottom Card: Quote Slider */}
+          <div className="bg-white border border-gray-200 rounded-xl shadow-md p-6 flex flex-col justify-between flex-1 order-3 lg:order-2">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={slides[current].quote}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.6 }}
+                className="flex items-center gap-4 mb-4"
+              >
+                {/* Slide Number Image on Left */}
+                <img
+                  src={slides[current].numberImg}
+                  alt={`Slide ${slides[current].id}`}
+                  className="w-16 h-22"
+                />
 
-            {/* Slider Card */}
-            <div className="bg-white rounded-xl shadow-lg p-6 relative overflow-hidden">
-              <div className="overflow-hidden relative min-h-[120px] sm:min-h-[150px] md:min-h-[160px]">
-                <div
-                  className="flex transition-transform duration-500 ease-in-out"
-                  style={{
-                    transform: `translateX(-${currentSlide * 100}%)`,
-                    width: `${testimonials.length * 100}%`,
-                  }}
-                >
-                  {testimonials.map((testimonial, index) => (
-                    <div
-                      key={testimonial.id}
-                      className="w-full flex-shrink-0 flex items-center gap-4 sm:gap-6 px-2 sm:px-4 md:px-6"
-                    >
-                      <img
-                        src="1.png"
-                        alt={`slide-${index + 1}`}
-                        className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain flex-shrink-0"
-                      />
-                      <p className="text-gray-600 italic text-sm sm:text-base md:text-lg leading-snug break-words">
-                        "{testimonial.quote}"
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+                {/* Quote Text */}
+                <p className="italic text-gray-700 text-sm sm:text-base">
+                  "{slides[current].quote}"
+                </p>
+              </motion.div>
+            </AnimatePresence>
 
-              {/* Navigation Arrows */}
-              <div className="absolute bottom-4 right-4 flex gap-3">
-                <button
-                  onClick={prevSlide}
-                  className="border border-red-700 text-red-700 p-2 rounded-full hover:bg-red-100 transition-colors"
-                >
-                  <FaArrowLeft className="h-4 w-4 sm:h-5 sm:w-5" />
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="bg-red-700 text-white p-2 rounded-full hover:bg-red-800 transition-colors"
-                >
-                  <FaArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
-                </button>
-              </div>
+            {/* Navigation Buttons */}
+            <div className="flex justify-end gap-4">
+              <button
+                onClick={prevSlide}
+                className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-red-700 text-red-700 hover:bg-red-700 transition"
+              >
+                <FaArrowLeft />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-red-600 text-white hover:bg-red-700 transition"
+              >
+                <FaArrowRight />
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default SchoolComponent;
+}

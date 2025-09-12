@@ -127,17 +127,11 @@ const Results = () => {
   );
 };
 
-/**
- * AnimatedNumber
- * - Counts from 0 to `value` once when it scrolls into view.
- * - Fast by default (0.8s), smooth (spring), and memoized for performance.
- * - Preserves decimals (e.g., 28.1) and adds optional suffix.
- */
+
 const AnimatedNumber = ({ value, suffix = "" }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" }); // start a bit before fully in view
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" }); 
 
-  // Determine decimal precision once
   const decimals = useMemo(() => {
     const s = String(value);
     const idx = s.indexOf(".");
@@ -146,29 +140,26 @@ const AnimatedNumber = ({ value, suffix = "" }) => {
 
   // Motion values
   const base = useMotionValue(0);
-  const spring = useSpring(base, { stiffness: 120, damping: 20 }); // smooth & snappy
+  const spring = useSpring(base, { stiffness: 120, damping: 20 }); 
   const rounded = useTransform(spring, (latest) =>
     decimals > 0
       ? Number(latest).toFixed(decimals)
       : Math.round(latest).toString()
   );
 
-  // Kick off the tween when in view (only once)
   useEffect(() => {
     if (!isInView) return;
-    // animate quickly to target
     const target = Number(value) || 0;
-    // Use a short duration tween into the spring for speed + smooth finish
-    // Directly set the motion value over time
+    
     let raf;
     const start = performance.now();
-    const DURATION = 800; // ~0.8s "fast"
+    const DURATION = 800; 
     const startVal = 0;
 
     const step = (t) => {
       const elapsed = t - start;
       const p = Math.min(1, elapsed / DURATION);
-      // easeOutCubic
+     
       const eased = 1 - Math.pow(1 - p, 3);
       base.set(startVal + (target - startVal) * eased);
       if (p < 1) {
@@ -186,7 +177,6 @@ const AnimatedNumber = ({ value, suffix = "" }) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
-        {/** Using motion value as text via React state-less transform */}
         <motion.span>{rounded}</motion.span>
         {suffix}
       </motion.span>

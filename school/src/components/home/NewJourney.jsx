@@ -11,7 +11,7 @@ const NewJourney = () => {
       <div className="px-4 sm:px-2 lg:px-8 text-center">
         {/* Heading with slide-right animation */}
         <motion.h2
-          className="text-xl sm:text-2xl md:text-4xl lg:text-5xl mb-4 leading-snug"
+          className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 leading-snug"
           variants={SlideRight(0.2)}
           initial={reduceMotion ? "visible" : "hidden"}
           whileInView="visible"
@@ -64,7 +64,6 @@ const NewJourney = () => {
               whileHover={reduceMotion ? undefined : { scale: 1.1 }}
               whileTap={reduceMotion ? undefined : { scale: 0.95 }}
               onClick={() => {
-                // TODO: hook up your modal/video player
               }}
             >
               <FaPlay className="text-[#00285E] text-lg sm:text-xl md:text-2xl lg:text-3xl" />

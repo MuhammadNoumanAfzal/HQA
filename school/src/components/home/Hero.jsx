@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import styles from "./styles.module.scss";
-import { SlideUp } from "../../../utility/animation"; // adjust path if needed
+import { SlideUp } from "../../../utility/animation"; 
 
-// Import your assets
+
 import picture1 from "../../assets/img1.jpg";
 import picture2 from "../../assets/img2.jpg";
 import picture3 from "../../assets/img3.jpg";

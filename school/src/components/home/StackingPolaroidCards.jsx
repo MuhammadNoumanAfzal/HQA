@@ -1,15 +1,6 @@
 import React, { useMemo, useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
-/**
- * StackingPolaroidCards
- * - TailwindCSS + Framer Motion
- * - As you scroll, cards appear one-by-one and stack in a (stable) random order
- * - Pass your own images via the `images` prop; otherwise a few placeholders are used
- *
- * Usage:
- * <StackingPolaroidCards images={["/img/1.jpg", "/img/2.jpg", "/img/3.jpg"]} seed={7} />
- */
 export default function StackingPolaroidCards({
   images = ["/card.webp", "/card1.webp", "card.webp"],
   seed = 42,
@@ -21,22 +12,20 @@ export default function StackingPolaroidCards({
     offset: ["start start", "end end"],
   });
 
-  // --- Utilities for stable randomization ---
   const rng = useMemo(() => mulberry32(seed), [seed]);
   const order = useMemo(() => shuffle([...images.keys()], rng), [images, rng]);
   const variations = useMemo(
     () =>
       order.map(() => ({
-        // slight random offsets/rotations for an organic stack
-        rot: lerp(rng(), -12, 12), // degrees
-        x: lerp(rng(), -36, 36), // px
-        y: lerp(rng(), -18, 18), // px
+        rot: lerp(rng(), -12, 12),
+        x: lerp(rng(), -36, 36),
+        y: lerp(rng(), -18, 18),
       })),
     [order, rng]
   );
 
   const total = order.length;
-  const step = 1 / (total + 1); // +1 so the last card gets full time to arrive
+  const step = 1 / (total + 1);
 
   return (
     <section
@@ -58,9 +47,9 @@ export default function StackingPolaroidCards({
               [0, 1]
             );
             const progress = useSpring(progressRaw, {
-              stiffness: 45,
-              damping: 20,
-              mass: 1,
+              stiffness: 300,
+              damping: 30,
+              mass: 0.5,
             });
 
             const opacity = useTransform(progress, [0, 1], [0, 1]);
@@ -97,7 +86,6 @@ export default function StackingPolaroidCards({
               >
                 <div className="bg-zinc-900 rounded-xl shadow-2xl shadow-black/40 border border-black/10 p-2 sm:p-3 flex flex-col h-full">
                   <div className="relative overflow-hidden rounded-lg h-full">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={images[imgIndex]}
                       alt="card"
@@ -123,8 +111,6 @@ export default function StackingPolaroidCards({
               </motion.figure>
             );
           })}
-
-          {/* Subtle backdrop text to echo the reference style */}
         </div>
       </div>
     </section>

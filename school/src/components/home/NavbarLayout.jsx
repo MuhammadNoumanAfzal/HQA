@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars } from "react-icons/fa";
@@ -39,14 +38,14 @@ const navVariants = {
 export default function NavbarLayout() {
   const [showSplash, setShowSplash] = useState(true);
 
-  // End splash after 2.5s
+  // End splash after 1.5s
   useEffect(() => {
     const t = setTimeout(() => setShowSplash(false), 1500);
     return () => clearTimeout(t);
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-white overflow-hidden">
+    <div className="relative min-h-screen bg-white overflow-x-hidden">
       {/* Splash Screen */}
       <AnimatePresence>
         {showSplash && (
@@ -99,7 +98,7 @@ export default function NavbarLayout() {
           <main className="px-8">
             <Parallax strength={600}>
               <section
-                className="relative h-[70vh] grid place-items-center"
+                className="relative h-[50vh] sm:h-[70vh] grid place-items-center"
                 aria-label="Hero"
               >
                 <motion.img
@@ -108,15 +107,13 @@ export default function NavbarLayout() {
                   variants={ayatVariants}
                   initial="hidden"
                   animate="show"
-                  className="w-[260px] md:w-[820px] object-contain"
+                  className="w-[260px] sm:w-[260px] md:w-[820px] max-w-full mx-auto object-contain mt-16 sm:mt-20"
                 />
               </section>
             </Parallax>
-
-            <Parallax strength={1200}>
-              <HeroText />
-            </Parallax>
           </main>
+
+          <HeroText />
         </div>
       )}
     </div>

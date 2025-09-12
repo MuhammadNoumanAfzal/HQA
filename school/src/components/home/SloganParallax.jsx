@@ -11,9 +11,9 @@ const SloganParallax = () => {
       <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 w-full max-w-5xl">
         <h2
           className="text-white font-serif italic leading-snug sm:leading-normal md:leading-snug
-                     text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl"
+                     text-3xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl"
         >
-          Nurturing Faith, Knowledge
+          Nurturing Faith, Knowledge {""}
           <br className="hidden sm:block" />
           and Tomorrow&apos;s Leaders
         </h2>

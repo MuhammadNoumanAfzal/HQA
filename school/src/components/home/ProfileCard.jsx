@@ -9,6 +9,8 @@ import {
 
 const ProfileCard = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
 
   const slides = [
     {
@@ -37,18 +39,48 @@ const ProfileCard = () => {
   const prevSlide = () =>
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
 
+  // Handle swipe
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const minSwipe = 50; // minimum swipe distance
+
+    if (distance > minSwipe) {
+      // swipe left
+      nextSlide();
+    } else if (distance < -minSwipe) {
+      // swipe right
+      prevSlide();
+    }
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
+
   const slide = slides[currentSlide];
 
   return (
-    <div className="p-4 sm:p-12 font-serif overflow-visible relative z-20">
+    <div
+      className="p-4 sm:p-12 font-serif overflow-visible relative z-20"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="max-w-6xl mx-auto overflow-visible relative">
         {/* Header */}
         <div className="px-2 sm:px-12 py-4 sm:py-6 border-b border-blue-200 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl  text-[#00285E]">
             Beyond Struggles,
             <span className="text-red-500 italic"> Beyond Stars!</span>
           </h1>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 mt-2">
+          <p className="text-sm sm:text-base md:text-lg text-gray-800 mt-2">
             We proudly celebrate our top achievers,
             <br />
             whose dedication and excellence inspire us all
@@ -61,11 +93,11 @@ const ProfileCard = () => {
           <div className="order-2 md:order-1 flex justify-start md:justify-start mt-6 md:mt-0 relative">
             <AnimatePresence mode="wait">
               <motion.img
-                key={slide.image} // triggers animation when image changes
+                key={slide.image}
                 src={slide.image}
                 alt={slide.name}
                 className="absolute -bottom-54 mb-4 md:-top-34 h-64 md:h-[44rem] w-auto md:-left-16 object-contain select-none pointer-events-none z-0"
-                variants={SlideRight()} // image slides from right
+                variants={SlideRight()}
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
@@ -77,14 +109,14 @@ const ProfileCard = () => {
           <div className="order-1 md:order-2 p-4 sm:p-6 flex flex-col justify-center z-10 bg-[#BCDDFC] relative">
             <AnimatePresence mode="wait">
               <motion.div
-                key={slide.name} // triggers animation when slide changes
-                variants={SlideLeft()} // text slides from left
+                key={slide.name}
+                variants={SlideLeft()}
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
               >
                 <div className="mb-4">
-                  <p className="text-base sm:text-lg text-gray-600 mb-2">
+                  <p className="text-base sm:text-lg text-gray-800 mb-2">
                     {slide.class}
                   </p>
                   <h2 className="text-3xl font-semibold text-gray-800 mb-6">
@@ -100,7 +132,7 @@ const ProfileCard = () => {
                       <p className="text-3xl sm:text-4xl font-bold text-gray-800">
                         {slide.career}
                       </p>
-                      <p className="text-sm sm:text-base text-gray-600">
+                      <p className="text-sm sm:text-base text-gray-800">
                         Career in Industry
                       </p>
                     </div>
@@ -108,7 +140,7 @@ const ProfileCard = () => {
                       <p className="text-3xl sm:text-4xl font-bold text-gray-800">
                         {slide.patent}
                       </p>
-                      <p className="text-sm sm:text-base text-gray-600">
+                      <p className="text-sm sm:text-base text-gray-800">
                         Patent
                       </p>
                     </div>
@@ -120,7 +152,7 @@ const ProfileCard = () => {
                       <p className="text-3xl sm:text-4xl font-bold text-gray-800">
                         {slide.smallContent}
                       </p>
-                      <p className="text-sm sm:text-base text-gray-600">
+                      <p className="text-sm sm:text-base text-gray-800">
                         Small Content
                       </p>
                     </div>
@@ -128,7 +160,7 @@ const ProfileCard = () => {
                       <p className="text-3xl sm:text-4xl font-bold text-gray-800">
                         {slide.socialContent}
                       </p>
-                      <p className="text-sm sm:text-base text-gray-600">
+                      <p className="text-sm sm:text-base text-gray-800">
                         Social Content
                       </p>
                     </div>
@@ -166,7 +198,7 @@ const ProfileCard = () => {
                     Meet our Community
                   </motion.button>
 
-                  {/* Mobile Arrows below button */}
+                  {/* Mobile Arrows */}
                   <div className="flex flex-col items-end gap-4 mt-4 md:hidden">
                     <button
                       onClick={prevSlide}
@@ -187,7 +219,7 @@ const ProfileCard = () => {
           </div>
 
           {/* Desktop Arrows */}
-          <div className="absolute top-4 right-4 flex flex-row md:flex-col gap-2 z-10  md:flex">
+          <div className="absolute top-4 right-4 flex flex-row md:flex-col gap-2 z-10 md:flex">
             <button
               onClick={prevSlide}
               className="bg-red-700 border-white text-white p-2 sm:p-3 rounded-full hover:bg-red-800 transition-colors"

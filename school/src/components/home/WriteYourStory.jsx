@@ -35,7 +35,7 @@ const WriteYourStory = () => {
       <div className="relative text-center max-w-3xl z-10">
         {/* Heading */}
         <motion.h1
-          className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl text-[#CF3528] italic mb-4 sm:mb-6 leading-snug"
+          className="text-4xl xs:text-3xl sm:text-4xl md:text-5xl text-[#CF3528] italic mb-4 sm:mb-6 leading-snug"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -47,7 +47,7 @@ const WriteYourStory = () => {
 
         {/* Paragraph */}
         <motion.p
-          className="text-xs xs:text-sm sm:text-base md:text-lg text-gray-800 leading-relaxed max-w-2xl mx-auto"
+          className="text-xl xs:text-3xl sm:text-base md:text-lg text-gray-800 leading-relaxed max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}

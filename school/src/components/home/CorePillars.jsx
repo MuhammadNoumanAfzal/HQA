@@ -96,7 +96,7 @@ const CorePillars = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
-                className="text-2xl sm:text-3xl md:text-6xl text-gray-800 mb-4 mt-3"
+                className="text-2xl sm:text-3xl md:text-6xl pt-12 text-gray-800 mb-4 mt-3"
               >
                 <span className="text-[#CF3528]">Core</span>{" "}
                 <span className="text-[#00285E] italic">Pillars</span>
@@ -168,9 +168,9 @@ const CorePillars = () => {
                   <img
                     src={pillars[i].img}
                     alt={pillars[i].title}
-                    className="w-[95%] h-[100%] sm:h-[80%] object-cover rounded-4xl"
+                    className="w-[95%] h-[90%] sm:h-[70%] object-cover rounded-4xl"
                   />
-                  <div className="bg-[#00285EE5] text-white p-2 pb-6 md:p-6 rounded-xl -mt-16 sm:-mt-16 w-[95%] max-w-[400px]">
+                  <div className="bg-[#00285EE5] pb-16 text-white p-2 md:p-6 rounded-xl -mt-16 sm:-mt-16 w-[95%] max-w-[400px]">
                     <h3 className="text-2xl sm:text-3xl md:text-4xl mb-2">
                       {pillars[i].title}
                     </h3>

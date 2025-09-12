@@ -11,11 +11,10 @@ const Footer = () => {
     <div className="bg-red-700">
       <footer className="bg-[#00285E] min-h-screen lg:mr-20 font-serif rounded-tr-[40px] lg:rounded-tr-[70px]">
         {/* Top Section */}
-        {/* Top Section */}
         <div className="flex flex-col lg:flex-row justify-between">
           {/* Left Column */}
           <div className="px-8 sm:px-12 lg:px-0 flex flex-col">
-            <div className="flex flex-row justify-center items-center gap-3 pt-12 lg:pt-24 lg:pl-24 text-center lg:text-left">
+            <div className="flex flex-row  items-center gap-3 pt-12 lg:pt-24 lg:pl-24 text-center lg:text-left">
               <img src="/logo.png" className="h-20 lg:h-28" alt="logo" />
               <p className="text-white text-lg lg:text-2xl">
                 Houston <br /> Quran <br /> Academy

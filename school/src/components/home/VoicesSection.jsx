@@ -22,12 +22,11 @@ const VoicesSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-2xl md:text-4xl lg:text-5xl font-serif italic font-bold mb-12 md:mb-24"
+          className="text-2xl md:text-4xl lg:text-5xl font-serif italic  mb-12 md:mb-24"
         >
           Voices of <span className="text-red-500">Our District</span>
         </motion.h2>
 
-        {/* Desktop layout */}
         {/* Desktop layout */}
         <div className="hidden md:flex w-full justify-center gap-2 overflow-hidden rounded-xl items-end">
           {students.map((student, index) => {
@@ -46,10 +45,7 @@ const VoicesSection = () => {
             }
 
             return (
-              <div
-                key={student.id}
-                className="flex items-end" // ✅ ensures card always aligns at bottom
-              >
+              <div key={student.id} className="flex items-end">
                 <motion.div
                   className="relative overflow-hidden cursor-pointer rounded-lg shadow-lg flex items-end"
                   onClick={() => setActive(isActive ? null : index)}
@@ -81,7 +77,6 @@ const VoicesSection = () => {
         </div>
 
         {/* Mobile layout with horizontal scroll */}
-        {/* Mobile layout with horizontal scroll */}
         <div className="md:hidden flex overflow-x-auto pb-4 -mx-4 px-4 hide-scrollbar">
           <div className="flex gap-3 min-w-max items-end">
             {students.map((student, index) => {
@@ -91,7 +86,6 @@ const VoicesSection = () => {
               let width = 180;
               let height = 280;
 
-              // ✅ Make center card larger initially
               if (active === null && isCenter) {
                 width = 280;
                 height = 380;
@@ -135,11 +129,11 @@ const VoicesSection = () => {
 
       <style jsx>{`
         .hide-scrollbar {
-          -ms-overflow-style: none; /* IE and Edge */
-          scrollbar-width: none; /* Firefox */
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
         .hide-scrollbar::-webkit-scrollbar {
-          display: none; /* Chrome, Safari and Opera */
+          display: none;
         }
       `}</style>
     </section>

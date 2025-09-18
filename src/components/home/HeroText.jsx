@@ -33,7 +33,7 @@ const HeroText = () => {
         variants={container}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 1 }} // 👈 must be fully in view
+        viewport={{ once: false, amount: 1 }} // 👈 replay when scrolling up/down
         className="text-center"
       >
         <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif flex flex-wrap justify-center gap-3">

@@ -19,7 +19,7 @@ import StackingPolaroidCards from "../components/home/StackingPolaroidCards";
 const Home = () => {
   return (
     <div>
-      <NavbarLayout />
+      {/* <NavbarLayout /> */}
       <Hero />
       <Welcome />
       <CorePillars />
@@ -34,7 +34,7 @@ const Home = () => {
       <NewJourney />
       <HQANews />
       <WriteYourStory />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

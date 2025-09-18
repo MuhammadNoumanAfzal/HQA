@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SlideLeft, SlideRight } from "../../../utility/animation.js";
+import { SlideRight } from "../../../utility/animation.js";
 
 const Achievements = () => {
   const achievements = useMemo(
@@ -112,7 +112,6 @@ const Achievements = () => {
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-
     checkIsMobile();
     window.addEventListener("resize", checkIsMobile);
     return () => window.removeEventListener("resize", checkIsMobile);
@@ -161,99 +160,78 @@ const Achievements = () => {
 
   return (
     <section className="py-8 sm:py-12 text-gray-900 font-serif overflow-x-hidden">
-      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.h1
           variants={SlideRight(0.3)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="text-3xl text-[#00285E] sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-8 md:mb-16 text-center leading-snug"
+          className="text-3xl text-[#00285E] sm:text-3xl md:text-4xl lg:text-5xl  mb-8 md:mb-16 text-center leading-snug"
         >
           Our Proud Moments and <br />
-          <span className="text-red-700">Achievements at the School!</span>
+          <span className="text-red-700 italic">
+            Achievements at the School!
+          </span>
         </motion.h1>
 
-        {/* Main container */}
-        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
-          {/* Left Side - Badge */}
-          <motion.div
-            variants={SlideLeft(0.4)}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="hidden md:flex lg:w-1/3 bg-[#BCDDFC] rounded-xl p-4 sm:p-6 md:p-8 flex-col justify-end items-center shadow-lg min-h-[300px] sm:min-h-[400px] md:min-h-[500px]"
-          >
-            <img
-              src="/badge.png"
-              alt="badge"
-              className="w-20 h-20 sm:w-28 sm:h-28 md:w-40 md:h-40 object-contain mb-3 md:mb-4"
-            />
-            <div className="text-center">
-              <p className="text-base sm:text-lg md:text-xl font-semibold text-red-800 mt-2 leading-snug">
-                Among Top 10 <br /> Private Schools <br /> in Houston
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Right Side - Achievements Grid */}
-          <motion.div
-            className="lg:w-2/3 grid grid-cols-3 gap-3 sm:gap-4 md:gap-6"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={{
-              visible: {
-                transition: { staggerChildren: 0.15, delayChildren: 0.9 },
-              },
-            }}
-          >
-            {achievements.map((ach, index) => (
-              <motion.div
-                key={ach.id}
-                onMouseEnter={(e) => handleEnter(e, ach)}
-                onMouseLeave={handleLeave}
-                onClick={(e) => handleClick(e, ach)}
-                variants={{
-                  hidden: { opacity: 0, y: 40, scale: 0.95 },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    scale: 1,
-                    transition: {
-                      duration: 0.8,
-                      delay: index * 0.2,
-                      ease: [0.22, 1, 0.36, 1],
-                    },
+        {/* Achievements Grid - Full width */}
+        <motion.div
+          className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={{
+            visible: {
+              transition: { staggerChildren: 0.15, delayChildren: 0.5 },
+            },
+          }}
+        >
+          {achievements.map((ach, index) => (
+            <motion.div
+              key={ach.id}
+              onMouseEnter={(e) => handleEnter(e, ach)}
+              onMouseLeave={handleLeave}
+              onClick={(e) => handleClick(e, ach)}
+              variants={{
+                hidden: { opacity: 0, y: 40, scale: 0.95 },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  transition: {
+                    duration: 0.8,
+                    delay: index * 0.2,
+                    ease: [0.22, 1, 0.36, 1],
                   },
-                }}
-                className="relative group bg-[url('/slidebg.jpg')] bg-cover bg-center bg-no-repeat border border-[#ADADAD] rounded-xl h-40 xs:h-44 sm:h-48 md:h-52 flex flex-col items-center justify-center text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-0.5 cursor-pointer"
-                style={{
-                  boxShadow:
-                    "0 10px 20px rgba(0,0,0,0.3), 0 6px 6px rgba(0,0,0,0.25)",
-                }}
-              >
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/40 rounded-xl" />
+                },
+              }}
+              className="relative group bg-white border border-[#ADADAD] rounded-xl h-40 xs:h-44 sm:h-48 md:h-52 flex flex-col items-center justify-center text-center transition-all duration-500 hover:shadow-2xl hover:-translate-y-0.5 cursor-pointer"
+              style={{
+                boxShadow:
+                  "0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.15)",
+              }}
+            >
+              {/* Overlay (darker on hover only) */}
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 rounded-xl transition-opacity duration-300" />
 
-                {/* Content */}
-                <div className="relative z-10 px-2 sm:px-3 py-1 sm:py-2 flex flex-col items-center">
-                  <img
-                    src={ach.img}
-                    alt={`achievement-${ach.id}`}
-                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain mb-2 transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="mt-1 text-xs sm:text-sm md:text-base lg:text-lg font-medium leading-snug text-white break-words">
-                    {ach.text}
-                  </div>
+              {/* Content */}
+              <div className="relative z-10 px-2 sm:px-3 py-1 sm:py-2 flex flex-col items-center">
+                <img
+                  src={ach.img}
+                  alt={`achievement-${ach.id}`}
+                  className="w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 object-contain mb-2 transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="mt-1 text-xs sm:text-sm md:text-base lg:text-lg font-medium leading-snug text-gray-800">
+                  {ach.text}
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
 
-      {/* Hover Preview Card (desktop) */}
+      {/* Hover Preview (desktop) */}
       <AnimatePresence>
         {hovered && !isMobile && (
           <motion.div
@@ -287,7 +265,7 @@ const Achievements = () => {
         )}
       </AnimatePresence>
 
-      {/* Mobile Preview Card */}
+      {/* Mobile Preview */}
       <AnimatePresence>
         {active && isMobile && (
           <>
@@ -295,7 +273,7 @@ const Achievements = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0  z-50"
+              className="fixed inset-0 z-50 bg-black/30"
               onClick={closePreview}
             />
             <motion.div

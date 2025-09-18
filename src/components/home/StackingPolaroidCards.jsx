@@ -4,7 +4,6 @@ import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 export default function StackingPolaroidCards({
   images = ["/card.webp", "/card1.webp", "card.webp"],
   seed = 42,
-  title = "Stacking Cards",
 }) {
   const stageRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -30,9 +29,22 @@ export default function StackingPolaroidCards({
   return (
     <section
       ref={stageRef}
-      aria-label={title}
-      className="relative h-[calc(100vh_*_6)] sm:h-[calc(100vh_*_7)]  text-gray-900"
+      aria-label="Building Bright Futures"
+      className="relative h-[calc(100vh_*_4)] sm:h-[calc(100vh_*_7)] text-gray-900"
     >
+      {/* Heading + Paragraph */}
+      <div className="max-w-4xl mx-auto text-center px-4 py-12 font-serif">
+        <h2 className="text-4xl md:text-5xl  mb-4">
+          <span className="text-[#00285E]">Building</span>{" "}
+          <span className="text-red-700 italic">Bright Futures</span>
+        </h2>
+        <p className="text-gray-800 text-xl leading-relaxed">
+          We cultivate wisdom, strengthen character, and ignite potential.
+          Rooted in faith and excellence, we empower students to lead, thrive,
+          and shape a brighter future.
+        </p>
+      </div>
+
       {/* Sticky stage where the cards stack */}
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
         <div className="relative w-full max-w-5xl h-full">

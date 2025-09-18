@@ -67,7 +67,7 @@ const Results = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl italic text-red-700 font-semibold mb-16 text-center"
+          className="text-4xl md:text-5xl italic text-red-700  mb-16 text-center"
         >
           Standardized Test Results
         </motion.h1>
@@ -127,10 +127,9 @@ const Results = () => {
   );
 };
 
-
 const AnimatedNumber = ({ value, suffix = "" }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" }); 
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -10% 0px" });
 
   const decimals = useMemo(() => {
     const s = String(value);
@@ -140,7 +139,7 @@ const AnimatedNumber = ({ value, suffix = "" }) => {
 
   // Motion values
   const base = useMotionValue(0);
-  const spring = useSpring(base, { stiffness: 120, damping: 20 }); 
+  const spring = useSpring(base, { stiffness: 120, damping: 20 });
   const rounded = useTransform(spring, (latest) =>
     decimals > 0
       ? Number(latest).toFixed(decimals)
@@ -150,16 +149,16 @@ const AnimatedNumber = ({ value, suffix = "" }) => {
   useEffect(() => {
     if (!isInView) return;
     const target = Number(value) || 0;
-    
+
     let raf;
     const start = performance.now();
-    const DURATION = 800; 
+    const DURATION = 800;
     const startVal = 0;
 
     const step = (t) => {
       const elapsed = t - start;
       const p = Math.min(1, elapsed / DURATION);
-     
+
       const eased = 1 - Math.pow(1 - p, 3);
       base.set(startVal + (target - startVal) * eased);
       if (p < 1) {

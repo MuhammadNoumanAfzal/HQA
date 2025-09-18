@@ -55,3 +55,26 @@ export const SlideButton = (delay = 0) => ({
     },
   },
 });
+
+// Add these to your existing animation.js file
+
+export const FadeIn = (delay = 0) => ({
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      delay: delay,
+    },
+  },
+});
+
+export const StaggerChildren = (stagger = 0.1) => ({
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: stagger,
+    },
+  },
+});

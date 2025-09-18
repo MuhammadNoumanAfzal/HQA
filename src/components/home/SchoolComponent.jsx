@@ -80,7 +80,7 @@ export default function ResponsiveSlider() {
       onTouchEnd={handleTouchEnd}
     >
       {/* Heading */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 lg:text-left font-serif">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl  mb-8 lg:text-left font-serif">
         <span className="text-[#0F2C56] font-serif">From HQA to </span>
         <span className="text-[#C0392B] italic">Higher Ground</span>
       </h2>
@@ -89,9 +89,7 @@ export default function ResponsiveSlider() {
       <div className="lg:hidden flex flex-col gap-6">
         {/* Top Card */}
         <div className="bg-[#0E2954] text-white p-6 rounded-xl shadow-md">
-          <h3 className="text-lg sm:text-xl font-bold mb-2">
-            {slides[current].title}
-          </h3>
+          <h3 className="text-lg sm:text-xl  mb-2">{slides[current].title}</h3>
           <p className="text-sm sm:text-base">{slides[current].description}</p>
         </div>
 
@@ -176,7 +174,7 @@ export default function ResponsiveSlider() {
         <div className="flex flex-col justify-between gap-6 order-2 lg:order-2">
           {/* Top Card */}
           <div className="bg-[#0E2954] text-white p-6 rounded-xl shadow-md">
-            <h3 className="text-lg sm:text-xl font-bold mb-2">
+            <h3 className="text-lg sm:text-xl  mb-2">
               {slides[current].title}
             </h3>
             <p className="text-sm sm:text-base">

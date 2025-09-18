@@ -74,7 +74,7 @@ const AlumniComponent = () => {
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col">
         {/* Heading */}
-        <h1 className="text-2xl sm:text-3xl text-indigo-900 mb-4">
+        <h1 className="text-3xl sm:text-4xl text-indigo-900 mb-4">
           Beyond Memories;{" "}
           <span className="text-red-600">A Future Together!</span>
         </h1>
@@ -215,7 +215,7 @@ const AlumniComponent = () => {
         </div>
 
         {/* Right Section - Image */}
-        <div className="w-full lg:w-2/5 flex justify-center lg:justify-end mt-6 order-2 lg:order-2">
+        <div className="w-full  lg:w-2/5 flex justify-center lg:justify-end mt-6 order-2 lg:order-2">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.img
               key={currentSlide}

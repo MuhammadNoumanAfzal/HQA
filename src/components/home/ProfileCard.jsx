@@ -75,16 +75,30 @@ const ProfileCard = () => {
     >
       <div className="max-w-6xl mx-auto overflow-visible relative">
         {/* Header */}
+        {/* Header */}
         <div className="px-2 sm:px-12 py-4 sm:py-6 border-b border-blue-200 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl  text-[#00285E]">
+          <motion.h1
+            variants={SlideLeft(0)} // slide from left
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            className="text-4xl sm:text-5xl md:text-6xl text-[#00285E]"
+          >
             Beyond Struggles,
-            <span className="text-red-500 italic"> Beyond Stars!</span>
-          </h1>
-          <p className="text-sm sm:text-base md:text-lg text-gray-800 mt-2">
+            <span className="text-red-700 italic"> Beyond Stars!</span>
+          </motion.h1>
+
+          <motion.p
+            variants={SlideRight(0.1)} // slide from right
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            className="text-sm sm:text-base md:text-lg text-gray-800 mt-6"
+          >
             We proudly celebrate our top achievers,
             <br />
             whose dedication and excellence inspire us all
-          </p>
+          </motion.p>
         </div>
 
         {/* Main Content */}

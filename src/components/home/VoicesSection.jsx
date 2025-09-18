@@ -22,7 +22,7 @@ const VoicesSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-2xl md:text-4xl lg:text-5xl font-serif italic  mb-12 md:mb-24"
+          className="text-3xl md:text-4xl lg:text-5xl font-serif italic  mb-12 md:mb-24"
         >
           Voices of <span className="text-red-500">Our District</span>
         </motion.h2>

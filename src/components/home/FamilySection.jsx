@@ -25,7 +25,7 @@ const FamilySection = () => {
   return (
     <section className="py-12 sm:py-16 bg-white text-gray-900 font-serif">
       <div className="px-4 sm:px-6 lg:px-8 relative z-10">
-        <h2 className="text-2xl sm:text-3xl md:text-5xl text-center text-[#00285E] mb-4 sm:mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl text-center text-[#00285E] mb-4 sm:mb-6">
           Beyond Unity,{" "}
           <span className="italic text-red-700">A Family Forever</span>
         </h2>

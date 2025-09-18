@@ -127,7 +127,7 @@ export default function HQANews() {
   const currentCards = tabCards[activeTab];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16 font-serif">
+    <div className=" px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16 font-serif">
       {/* Header */}
       <div className="text-center mb-8 md:mb-12 lg:mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl text-[#00285E]">

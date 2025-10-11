@@ -1,41 +1,78 @@
-import React from "react";
+import { motion } from "framer-motion";
 import {
   FaArrowRight,
   FaFacebookF,
   FaTwitter,
   FaInstagram,
 } from "react-icons/fa";
+import { SlideLeft, SlideRight, SlideUp } from "../../../utility/animation";
 
 const Cta = () => {
   return (
     <section className="bg-[#BCDDFC] py-20 px-6 flex flex-col items-center justify-center text-center font-serif">
       {/* Title */}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#00285E] italic mb-6 leading-snug">
+      <motion.h2
+        variants={SlideRight(0.3)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#00285E] italic mb-6 leading-snug"
+      >
         Ready to Apply?
-      </h2>
+      </motion.h2>
 
       {/* Paragraphs */}
-      <p className="max-w-3xl text-base sm:text-2xl md:text-3xl text-[#00285E] leading-relaxed mb-2">
+      <motion.p
+        variants={SlideLeft(0.6)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="max-w-3xl text-base sm:text-2xl md:text-3xl text-[#00285E] leading-relaxed mb-2"
+      >
         Begin Your Child’s Journey Today.
-      </p>
+      </motion.p>
 
-      <p className="max-w-3xl sm:text-2xl md:text-3xl text-[#252626] leading-relaxed mb-2">
+      <motion.p
+        variants={SlideRight(0.9)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="max-w-3xl sm:text-2xl md:text-3xl text-[#252626] leading-relaxed mb-2"
+      >
         Have questions? We’re here to help!
-      </p>
+      </motion.p>
 
-      <p className="max-w-3xl sm:text-2xl md:text-3xl text-[#252626] leading-relaxed mb-12">
+      <motion.p
+        variants={SlideLeft(1.1)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="max-w-3xl sm:text-2xl md:text-3xl text-[#252626] leading-relaxed mb-12"
+      >
         Call us at <span className="text-[#CF3528]">281-717-4622</span> or Email{" "}
         <span className="text-[#CF3528]">admissions@hqa</span> for personalized
         support.
-      </p>
+      </motion.p>
 
       {/* Button */}
-      <button className="flex items-center gap-2 cursor-pointer bg-white text-[#CF3528] px-6 py-3 rounded-lg shadow-md text-sm sm:text-base md:text-lg transition hover:scale-105">
+      <motion.button
+        variants={SlideUp(1.2)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="flex items-center gap-2 cursor-pointer bg-white text-[#CF3528] px-6 py-3 rounded-lg shadow-md text-sm sm:text-base md:text-lg transition hover:scale-105"
+      >
         Apply Now <FaArrowRight className="text-[#CF3528]" />
-      </button>
+      </motion.button>
 
       {/* Social Icons */}
-      <div className="flex gap-6 mt-8 text-gray-800">
+      <motion.div
+        variants={SlideUp(1.2)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="flex gap-6 mt-8 text-gray-800"
+      >
         <a
           href="#"
           aria-label="Facebook"
@@ -57,7 +94,7 @@ const Cta = () => {
         >
           <FaInstagram size={22} />
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 };

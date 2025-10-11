@@ -41,6 +41,7 @@ const menuItems = [
       { name: "Quran Memorization", path: "/memorizaton" },
       { name: "Athelatics", path: "/athelatics" },
       { name: "Student Life", path: "/student-life" },
+      { name: "Career", path: "/career" },
     ],
   },
 ];

@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "../components/admission/Hero";
 import Message from "../components/admission/Message";
 import WhyChooseUs from "../components/admission/WhyChooseUs";

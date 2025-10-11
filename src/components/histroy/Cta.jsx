@@ -19,7 +19,7 @@ const cta = () => {
       </p>
 
       {/* Button */}
-      <button className="flex items-center gap-2  cursor-pointer bg-white  hover:bg-[#00285E] text-red-700 px-6 py-3 rounded-lg shadow-md text-sm sm:text-base  transition">
+      <button className="flex items-center gap-2  cursor-pointer bg-white  hover:bg-[#00285E] hover:text-white text-red-700 px-6 py-3 rounded-lg shadow-md text-sm sm:text-base  transition">
         Donate Now
       </button>
     </section>

@@ -45,7 +45,7 @@ const App = () => {
           <Route path="/academics" element={<Academics />} />
           <Route path="/pre-school" element={<PreSchool />} />
           <Route path="/leadership" element={<LeaderShip />} />
-          {/* <Route path="/histroy" element={<Histroy />} /> */}
+          <Route path="/histroy" element={<Histroy />} />
           <Route path="/memorizaton" element={<Memorization />} />
           <Route path="/middel-school" element={<MiddelSchool />} />
           <Route path="/high-school" element={<HighSchool />} />

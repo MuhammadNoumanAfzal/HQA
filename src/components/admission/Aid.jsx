@@ -1,4 +1,6 @@
 import React from "react";
+import { SlideLeft, SlideUp, SlideRight } from "../../../utility/animation";
+import { motion } from "framer-motion";
 
 const Aid = () => {
   return (
@@ -12,23 +14,47 @@ const Aid = () => {
       {/* Content */}
       <div className="relative w-full max-w-4xl flex flex-col items-center justify-center">
         {/* Title */}
-        <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl italic  leading-snug mb-6">
+        <motion.h1
+          variants={SlideUp(0.3)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl italic  leading-snug mb-6"
+        >
           Tuition & Financial Aid
-        </h1>
+        </motion.h1>
 
         {/* Description */}
-        <p className="text-white text-xl sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 px-2">
+        <motion.p
+          variants={SlideRight(0.5)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-white text-xl sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 px-2"
+        >
           We are committed to making Islamic education accessible. Need-based
           scholarships and sibling discounts are available.
-        </p>
-        <p className="text-white text-xl sm:text-base md:text-lg leading-relaxed mb-8 px-2">
+        </motion.p>
+        <motion.p
+          variants={SlideLeft(0.8)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-white text-xl sm:text-base md:text-lg leading-relaxed mb-8 px-2"
+        >
           Visit our Tuition & Aid page for details.
-        </p>
+        </motion.p>
 
         {/* Button */}
-        <button className="text-[#CF3528] rounded-md  bg-white font-semibold px-6 sm:px-8 py-3  shadow-md transition-all duration-300 text-sm sm:text-base md:text-lg cursor-pointer">
+        <motion.button
+          variants={SlideRight(1.1)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-[#CF3528] rounded-md  bg-white font-semibold px-6 sm:px-8 py-3  shadow-md transition-all duration-300 text-sm sm:text-base md:text-lg cursor-pointer"
+        >
           Tuition & Aid
-        </button>
+        </motion.button>
       </div>
     </section>
   );

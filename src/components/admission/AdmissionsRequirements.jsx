@@ -1,5 +1,5 @@
-import React from "react";
-
+import { motion } from "framer-motion";
+import { SlideLeft, SlideRight, SlideUp } from "../../../utility/animation";
 const requirements = [
   "Application form completed online",
   "Pass Admission Test with Minimum 75% Grade",
@@ -13,13 +13,24 @@ const AdmissionsRequirements = () => {
   return (
     <section className="py-12 px-10 font-serif">
       {/* Heading */}
-      <h2 className="text-4xl md:text-5xl italic  text-center mb-10 text-red-700">
+      <motion.h2
+        variants={SlideUp(0.3)}
+        initial="hidden"
+        whileInView="visible"
+        className="text-4xl md:text-5xl italic  text-center mb-10 text-red-700"
+      >
         Admissions Requirements
-      </h2>
+      </motion.h2>
 
       <div className="w-full grid md:grid-cols-2 items-stretch">
         {/* Left Side (Cards) */}
-        <div className="flex flex-col space-y-4 h-full">
+        <motion.div
+          variants={SlideRight(0.6)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="flex flex-col space-y-4 h-full"
+        >
           {requirements.map((req, index) => {
             const isDark = index % 2 === 0; // dark blue cards
             return (
@@ -41,15 +52,23 @@ const AdmissionsRequirements = () => {
               </div>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Right Side (Image) */}
-        <div className="relative shadow-lg overflow-hidden w-full h-full clip-left">
-          <img
-            src="/admission/library.jpg"
-            alt="Library"
-            className="w-full h-[90vh] object-cover"
-          />
+        <div className="relative w-full h-full overflow-hidden">
+          <motion.div
+            variants={SlideLeft(0.5)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="relative shadow-lg w-full h-full clip-left"
+          >
+            <img
+              src="/admission/library.jpg"
+              alt="Library"
+              className="w-full h-[90vh] object-cover"
+            />
+          </motion.div>
         </div>
       </div>
     </section>

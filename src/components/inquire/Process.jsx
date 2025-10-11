@@ -68,7 +68,7 @@ const Process = () => {
             className="absolute bottom-[-8rem] sm:bottom-[-2rem] left-1/2 -translate-x-1/2 
             bg-white shadow-lg rounded-lg p-4 sm:p-6 md:p-8 
             w-[90%] sm:w-[85%] md:w-[75%] 
-            lg:hidden pb-20"
+            lg:hidden "
           >
             <AnimatePresence mode="wait">
               <motion.div
@@ -113,47 +113,62 @@ const Process = () => {
         </div>
 
         {/* Desktop Card */}
-        <div
-          className="hidden lg:block lg:w-[35%] bg-white shadow-lg rounded-lg p-6 md:p-14
-          relative translate-y-6 translate-x-10"
-        >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={slides[current].title}
-              variants={SlideUp(0.2)}
+        <div className="hidden lg:block lg:w-[35%] relative">
+          {/* Step Text Indicator - Only current step visible */}
+          <div className="flex justify-start mb-8">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`step-${current}`}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.3 }}
+                className="font-serif italic font-medium text-6xl text-gray-300"
+              >
+                Step {current + 1}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          <div className="bg-white shadow-lg rounded-lg p-6 md:p-14 relative translate-y-6 translate-x-10">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={slides[current].title}
+                variants={SlideUp(0.2)}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+              >
+                <h4 className="text-red-700 font-serif italic font-semibold mb-2 text-lg">
+                  {slides[current].title}
+                </h4>
+                <p className="text-gray-800 text-base leading-relaxed">
+                  {slides[current].desc}
+                </p>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Desktop Arrows */}
+            <motion.button
+              onClick={prevSlide}
+              variants={SlideButton(0.3)}
               initial="hidden"
               animate="visible"
-              exit="hidden"
+              className="absolute -left-3 md:-left-4 top-1/2 transform -translate-y-1/2 bg-white border-2 border-[#CF3528] rounded-full h-8 w-8 flex items-center justify-center shadow-md"
             >
-              <h4 className="text-red-700 font-serif italic font-semibold mb-2 text-lg">
-                {slides[current].title}
-              </h4>
-              <p className="text-gray-800 text-base leading-relaxed">
-                {slides[current].desc}
-              </p>
-            </motion.div>
-          </AnimatePresence>
+              <FaArrowLeft className="text-[#CF3528] text-sm" />
+            </motion.button>
 
-          {/* Desktop Arrows */}
-          <motion.button
-            onClick={prevSlide}
-            variants={SlideButton(0.3)}
-            initial="hidden"
-            animate="visible"
-            className="absolute -left-3 md:-left-4 top-1/2 transform -translate-y-1/2 bg-white border-2 border-[#CF3528] rounded-full h-8 w-8 flex items-center justify-center shadow-md"
-          >
-            <FaArrowLeft className="text-[#CF3528] text-sm" />
-          </motion.button>
-
-          <motion.button
-            onClick={nextSlide}
-            variants={SlideButton(0.4)}
-            initial="hidden"
-            animate="visible"
-            className="absolute -right-3 md:-right-4 top-1/2 transform -translate-y-1/2 bg-[#CF3528] text-white rounded-full h-8 w-8 flex items-center justify-center shadow-md"
-          >
-            <FaArrowRight className="text-sm" />
-          </motion.button>
+            <motion.button
+              onClick={nextSlide}
+              variants={SlideButton(0.4)}
+              initial="hidden"
+              animate="visible"
+              className="absolute -right-3 md:-right-4 top-1/2 transform -translate-y-1/2 bg-[#CF3528] text-white rounded-full h-8 w-8 flex items-center justify-center shadow-md"
+            >
+              <FaArrowRight className="text-sm" />
+            </motion.button>
+          </div>
         </div>
       </section>
 

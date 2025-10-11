@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 const Hero = () => {
   const [open, setOpen] = useState(false);
 
-  // Menu items
+  // ✅ Menu items with links
   const menuItems = [
-    "Inquire",
-    "Enrolment",
-    "FAQs",
-    "Tuition Fee",
-    "Scholarship",
+    { text: "Inquire", link: "/inquire" },
+    { text: "Enrolment", link: "/enrollement" },
+    { text: "FAQs", link: "/faqs" },
+    { text: "Tuition Fee", link: "/tution-fee" },
+    { text: "Scholarship", link: "/scholarship" },
   ];
 
   return (
@@ -37,7 +37,7 @@ const Hero = () => {
             viewport={{ once: true, amount: 0.3 }}
             className="text-white text-3xl sm:text-5xl md:text-6xl italic drop-shadow-lg text-center"
           >
-            Athletics at HQA
+            Athletics at HQA{" "}
           </motion.h1>
         </div>
       </div>
@@ -67,26 +67,28 @@ const Hero = () => {
         {/* Dropdown */}
         {open && (
           <div className="md:hidden mt-2 flex flex-col items-center gap-2 transition-all duration-300">
-            {menuItems.map((text, i) => (
-              <p
+            {menuItems.map((item, i) => (
+              <a
                 key={i}
+                href={item.link}
                 className="hover:bg-red-100 p-2 rounded cursor-pointer text-center w-full"
               >
-                {text}
-              </p>
+                {item.text}
+              </a>
             ))}
           </div>
         )}
 
         {/* -------- Desktop View: Grid -------- */}
         <div className="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 text-center">
-          {menuItems.map((text, i) => (
-            <p
+          {menuItems.map((item, i) => (
+            <a
               key={i}
+              href={item.link}
               className="text-black hover:opacity-80 cursor-pointer text-xs sm:text-sm md:text-base"
             >
-              {text}
-            </p>
+              {item.text}
+            </a>
           ))}
         </div>
       </div>

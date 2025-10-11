@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { SlideRight } from "../../../utility/animation";
+import { motion } from "framer-motion";
 
 const students = [
   {
@@ -38,25 +40,49 @@ const Team = () => {
       <div className="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-6 md:gap-8 items-start">
         {/* Left Side */}
         <div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl italic text-[#012974] mb-6 md:mb-10">
+          <motion.h2
+            variants={SlideRight(0.3)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl italic text-[#012974] mb-6 md:mb-10"
+          >
             Meet Our Students
-          </h2>
-          <p className="text-gray-700 text-sm sm:text-base mb-3 md:mb-4">
+          </motion.h2>
+          <motion.p
+            variants={SlideRight(0.6)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-gray-700 text-sm sm:text-base mb-3 md:mb-4"
+          >
             At Houston Quran Academy, every student arrives with a unique
             story—shaped by different cultures, dreams, and talents. Yet they
             are united by shared values: a love for learning, a commitment to
             faith, and a drive to lead with purpose.
-          </p>
-          <p className="text-gray-700 text-sm sm:text-base mb-3 md:mb-4">
+          </motion.p>
+          <motion.p
+            variants={SlideRight(0.9)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-gray-700 text-sm sm:text-base mb-3 md:mb-4"
+          >
             Here, students don't just attend school—they become part of a
             vibrant, nurturing family that celebrates diversity, encourages
             excellence, and cultivates character rooted in Islamic tradition.
-          </p>
-          <p className="text-gray-700 text-sm sm:text-base">
+          </motion.p>
+          <motion.p
+            variants={SlideRight(1.2)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-gray-700 text-sm sm:text-base"
+          >
             Whether they're excelling in academics, memorizing Quran, or serving
             the community, our students are growing into tomorrow's leaders—with
             hearts full of iman and minds ready to make a difference.
-          </p>
+          </motion.p>
         </div>
 
         {/* Right Side */}
@@ -67,11 +93,11 @@ const Team = () => {
               src={students[current].img}
               alt={students[current].title}
               className="w-full h-full object-cover transition-opacity duration-500"
-              key={current} // Force re-render to trigger transition
+              key={current}
             />
           </div>
 
-          {/* Mobile Arrows — below the slider */}
+          {/* Mobile Arrows */}
           <div className="md:hidden flex justify-center gap-4 mt-6">
             <button
               onClick={prevSlide}
@@ -91,7 +117,7 @@ const Team = () => {
 
           {/* Overlay Card */}
           <div className="absolute bg-[#00285E] -bottom-8 sm:-bottom-12 md:-bottom-16 left-1/2 transform -translate-x-1/2 w-[90%] max-w-[600px] md:max-w-[700px] lg:max-w-[500px]  shadow-xl rounded-lg p-4 sm:p-6 md:p-8  mb-6">
-            {/* Desktop Arrows (Inside the card) */}
+            {/* Desktop Arrows  */}
             <div className="hidden md:block">
               <button
                 onClick={prevSlide}

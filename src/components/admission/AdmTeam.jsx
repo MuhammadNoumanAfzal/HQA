@@ -1,4 +1,6 @@
 import { FaAngleRight } from "react-icons/fa";
+import { SlideUp } from "../../../utility/animation";
+import { motion } from "framer-motion";
 
 const AdnmTeam = () => {
   const cards = [
@@ -22,10 +24,16 @@ const AdnmTeam = () => {
   return (
     <section className="py-12 px-4 sm:px-6 md:px-10 font-serif bg-white">
       {/* Heading */}
-      <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl italic text-[#00285E] mb-8 md:mb-18">
+      <motion.h2
+        variants={SlideUp(0.3)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-center text-3xl sm:text-4xl lg:text-5xl italic text-[#00285E] mb-8 md:mb-18"
+      >
         Meet the <br />
         <span className="text-[#CF3528]">Admissions Team</span>
-      </h2>
+      </motion.h2>
 
       {/* Mobile Horizontal Scroll */}
       <div className="md:hidden overflow-x-auto flex gap-4 snap-x snap-mandatory">

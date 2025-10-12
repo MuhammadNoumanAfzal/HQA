@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   const [open, setOpen] = useState(false);
 
-  // ✅ Menu items with links
+  // Menu items with links
   const menuItems = [
     { text: "Inquire", link: "/inquire" },
     { text: "Enrolment", link: "/enrollement" },

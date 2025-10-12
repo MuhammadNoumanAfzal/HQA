@@ -23,7 +23,6 @@ const Inquire = () => {
       <CampusTours />
       <Process />
       <TourSchedule />
-
       <Slogan />
       <InfoSection />
       <Learning></Learning>

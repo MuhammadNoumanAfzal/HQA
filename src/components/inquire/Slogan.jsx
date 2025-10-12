@@ -1,3 +1,6 @@
+import { SlideRight } from "../../../utility/animation";
+import { motion } from "framer-motion";
+
 const Slogan = () => {
   return (
     <section
@@ -12,27 +15,51 @@ const Slogan = () => {
         {/* Top Divider with logo */}
         <div className="relative w-full flex items-center justify-center mb-16 md:mb-20">
           {/* Logo container */}
-          <div className="flex-shrink-0 px-4">
+          <motion.div
+            variants={SlideRight(0.3)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="flex-shrink-0 px-4"
+          >
             <img
               src="/logo.png"
               alt="Heritage Logo"
               className="h-20 w-20 mx-auto"
             />
-          </div>
+          </motion.div>
         </div>
-        <p className="text-white max-w-3xl text-3xl leading-relaxed px-4 md:px-6 mb-4">
+        <motion.p
+          variants={SlideRight(0.5)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-white max-w-3xl text-3xl leading-relaxed px-4 md:px-6 mb-4"
+        >
           Parent Testimonial
-        </p>
+        </motion.p>
 
         {/* Description */}
-        <p className="text-white max-w-4xl text-xl leading-relaxed px-4 md:px-6 mb-4">
+        <motion.p
+          variants={SlideRight(0.7)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-white max-w-5xl text-xl leading-relaxed px-4 md:px-6 mb-4"
+        >
           “The open-door policy here makes every voice matter. Administrators,
           teachers, and students engage openly—fostering trust, collaboration,
           and a genuine sense of belonging.”
-        </p>
-        <p className="text-white max-w-3xl font-bold text-sm sm:text-base md:text-lg leading-relaxed mb-8 md:mb-12 px-4">
+        </motion.p>
+        <motion.p
+          variants={SlideRight(0.9)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-white max-w-3xl font-bold text-sm sm:text-base md:text-lg leading-relaxed mb-8 md:mb-12 px-4"
+        >
           — HQA Parent{" "}
-        </p>
+        </motion.p>
 
         {/* Bottom Divider with comma icon */}
         <div className="relative w-full flex items-center justify-center mt-8">

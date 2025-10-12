@@ -40,11 +40,17 @@ const Process = () => {
   return (
     <div className="py-12 px-4 sm:px-10">
       {/* Heading */}
-      <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl italic text-[#00285E] mb-8 font-serif">
+      <motion.h2
+        variants={SlideUp(0.3)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-center text-3xl sm:text-4xl lg:text-5xl italic text-[#00285E] mb-8 font-serif"
+      >
         Step-by-Step
         <br className="sm:hidden" />
         <span className="text-[#CF3528]"> Admissions Process</span>
-      </h2>
+      </motion.h2>
 
       {/* Main Section */}
       <section className="flex flex-col lg:flex-row-reverse font-serif items-center justify-between gap-6 py-12 px-4 sm:px-10 relative">

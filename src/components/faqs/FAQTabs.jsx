@@ -186,7 +186,7 @@ export default function FAQTabs({ data }) {
       <div className="w-full max-w-6xl mx-auto">
         {/* Tabs */}
         <div className="flex flex-wrap gap-3 justify-center mb-10">
-          {/* Desktop: Show all tabs normally */}
+          {/* Desktop */}
           <div className="hidden sm:flex flex-wrap gap-3">
             {tabs.map((tab) => (
               <button
@@ -203,7 +203,7 @@ export default function FAQTabs({ data }) {
             ))}
           </div>
 
-          {/* Mobile: Single dropdown button */}
+          {/* Mobile */}
           <div className="sm:hidden relative w-full">
             <button
               onClick={() => setDropdownOpen(!dropdownOpen)}

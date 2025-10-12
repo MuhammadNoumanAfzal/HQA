@@ -1,3 +1,5 @@
+import { SlideLeft, SlideRight, SlideUp } from "../../../utility/animation";
+import { motion } from "framer-motion";
 const Slogan = () => {
   return (
     <section
@@ -10,7 +12,13 @@ const Slogan = () => {
       {/* Content */}
       <div className="relative w-full  flex flex-col items-center justify-center">
         {/* Top Divider with logo */}
-        <div className="relative w-full flex items-center justify-center mb-16 md:mb-20">
+        <motion.div
+          variants={SlideUp(0.3)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="relative w-full flex items-center justify-center mb-16 md:mb-20"
+        >
           {/* Left divider line */}
           <div className="flex-grow h-px bg-white mr-4 max-w-[50%]"></div>
 
@@ -25,20 +33,38 @@ const Slogan = () => {
 
           {/* Right divider line */}
           <div className="flex-grow h-px bg-white ml-4 max-w-[50%]"></div>
-        </div>
+        </motion.div>
 
         {/* Description */}
-        <p className="text-white max-w-4xl text-xl leading-relaxed px-4 md:px-6 mb-4">
+        <motion.p
+          variants={SlideRight(0.5)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-white max-w-4xl text-xl leading-relaxed px-4 md:px-6 mb-4"
+        >
           "My years at HQA built my confidence to lead projects and advocate for
           my peers. The school's emphasis on public speaking and service shaped
           me into a proactive community member."
-        </p>
-        <p className="text-white max-w-3xl font-bold text-sm sm:text-base md:text-lg leading-relaxed mb-8 md:mb-12 px-4">
+        </motion.p>
+        <motion.p
+          variants={SlideLeft(0.7)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-white max-w-3xl font-bold text-sm sm:text-base md:text-lg leading-relaxed mb-8 md:mb-12 px-4"
+        >
           — Samir Khan, Class of 2021
-        </p>
+        </motion.p>
 
         {/* Bottom Divider with comma icon */}
-        <div className="relative w-full flex items-center justify-center mt-8 md:mt-16">
+        <motion.div
+          variants={SlideUp(0.9)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="relative w-full flex items-center justify-center mt-8 md:mt-16"
+        >
           {/* Left divider line */}
           <div className="flex-grow h-px bg-white mr-4 max-w-[50%]"></div>
 
@@ -53,7 +79,7 @@ const Slogan = () => {
 
           {/* Right divider line */}
           <div className="flex-grow h-px bg-white ml-4 max-w-[50%]"></div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

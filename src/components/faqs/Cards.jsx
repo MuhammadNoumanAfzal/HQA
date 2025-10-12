@@ -1,30 +1,38 @@
 import { FaAngleRight } from "react-icons/fa";
+import { SlideLeft, SlideRight, SlideUp } from "../../../utility/animation";
+import { motion } from "framer-motion";
 const Cards = () => {
   const cards = [
     {
       title: "Student Life",
       text: "Discover who we are and what we stand for.",
-      img: "/scholarship/about.jpg", // replace with your image
+      img: "/scholarship/about.jpg",
     },
     {
       title: "Our Vision",
       text: "Learn about our mission and long-term goals.",
-      img: "/scholarship/addmisiion.jpg", // replace with your image
+      img: "/scholarship/addmisiion.jpg",
     },
     {
       title: "Get Involved",
       text: "Find out how you can join and contribute.",
-      img: "/scholarship/acdemic.jpg", // replace with your image
+      img: "/scholarship/acdemic.jpg",
     },
   ];
 
   return (
     <section className="py-12 px-10 font-serif bg-white">
       {/* Heading */}
-      <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl italic text-[#00285E]  mb-18 ">
+      <motion.h2
+        variants={SlideUp(0.4)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-center text-3xl sm:text-4xl lg:text-5xl italic text-[#00285E]  mb-18 "
+      >
         I’m looking forward to <br />
         <span className="text-[#CF3528]">learning more about...</span>
-      </h2>
+      </motion.h2>
 
       {/* Cards */}
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 ">

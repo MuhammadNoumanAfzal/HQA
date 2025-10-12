@@ -1,23 +1,42 @@
-import React from "react";
+import { SlideLeft, SlideRight, SlideUp } from "../../../utility/animation";
+import { motion } from "framer-motion";
 
 const Table3 = () => {
   return (
     <section className="w-full px-4 sm:px-6 md:px-10 py-12 bg-[#fdfdfd] font-serif">
       {/* Heading */}
-      <h2 className="text-center text-3xl italic sm:text-4xl lg:text-5xl text-[#00285E] mb-8 sm:mb-12">
+      <motion.h2
+        variants={SlideRight(0.3)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-center text-3xl italic sm:text-4xl lg:text-5xl text-[#00285E] mb-8 sm:mb-12"
+      >
         Monthly Tuition with{" "}
         <span className="text-[#CF3528]">
           {" "}
           Sibling <br />
           Discounts
         </span>
-      </h2>
-      <p className="text-center max-w-3xl mx-auto text-gray-700 text-sm sm:text-base leading-relaxed">
+      </motion.h2>
+      <motion.p
+        variants={SlideRight(0.5)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-center max-w-3xl mx-auto text-gray-700 text-sm sm:text-base leading-relaxed"
+      >
         To support our HQA families, we offer generous sibling discounts
-      </p>
+      </motion.p>
 
       {/* Table Container */}
-      <div className="flex justify-center py-10">
+      <motion.div
+        variants={SlideUp(0.7)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="flex justify-center py-10"
+      >
         <table className="w-full max-w-3xl text-sm sm:text-base border-collapse rounded-2xl overflow-hidden shadow-[0_15px_30px_5px_rgba(0,0,0,0.25),0_5px_10px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.2)]">
           <thead>
             <tr className="bg-[#00285E] text-white">
@@ -45,12 +64,18 @@ const Table3 = () => {
             ))}
           </tbody>
         </table>
-      </div>
+      </motion.div>
 
       {/* Paragraph Below Table */}
-      <p className="text-center max-w-3xl mx-auto text-gray-700 text-sm sm:text-base leading-relaxed">
+      <motion.p
+        variants={SlideLeft(0.9)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-center max-w-3xl mx-auto text-gray-700 text-sm sm:text-base leading-relaxed"
+      >
         All tuition payments are due by the 5th of each month.
-      </p>
+      </motion.p>
     </section>
   );
 };

@@ -1,5 +1,5 @@
-import React from "react";
-
+import { SlideLeft, SlideRight, SlideUp } from "../../../utility/animation";
+import { motion } from "framer-motion";
 const AdmissionDates = () => {
   return (
     <section className="relative w-full bg-[#BCDDFC] py-12 px-4 sm:px-6 md:px-10 font-serif overflow-hidden">
@@ -14,18 +14,36 @@ const AdmissionDates = () => {
 
           {/* Re-Enrolment */}
           <div className="bg-white shadow-md p-4 rounded-md">
-            <p className="text-gray-800">
+            <motion.p
+              variants={SlideRight(0.3)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="text-gray-800"
+            >
               Re-Enrolment Opens:{" "}
               <span className="font-semibold">February 12, 2026</span>
-            </p>
+            </motion.p>
           </div>
 
           {/* Admission Test Dates */}
           <div className="bg-white shadow-md p-4 rounded-md">
-            <p className="text-gray-800 font-medium mb-2">
+            <motion.p
+              variants={SlideRight(0.5)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="text-gray-800 font-medium mb-2"
+            >
               Admission Test Dates:
-            </p>
-            <ul className="list-disc list-inside text-[#00285E] space-y-1">
+            </motion.p>
+            <motion.ul
+              variants={SlideRight(0.7)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="list-disc list-inside text-[#00285E] space-y-1"
+            >
               <li>
                 <span className="font-semibold">December 10, 2026</span>
               </li>
@@ -35,22 +53,34 @@ const AdmissionDates = () => {
               <li>
                 <span className="font-semibold">March 2, 2026</span>
               </li>
-            </ul>
+            </motion.ul>
           </div>
 
           {/* Test Fee */}
           <div className="bg-[#DFF5E1] shadow-md p-4 rounded-md">
-            <p className="text-gray-800">
+            <motion.p
+              variants={SlideRight(0.9)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="text-gray-800"
+            >
               Admission Test Fee:{" "}
               <span className="font-semibold">$50 per child</span>
-            </p>
+            </motion.p>
           </div>
 
           {/* Note */}
           <div className="bg-[#FFF5E6] shadow-md p-4 rounded-md">
-            <p className="text-gray-800">
+            <motion.p
+              variants={SlideRight(1.1)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="text-gray-800"
+            >
               Seats are limited. Early applications are strongly encouraged.
-            </p>
+            </motion.p>
           </div>
         </div>
 

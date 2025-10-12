@@ -1,4 +1,5 @@
-import React from "react";
+import { SlideLeft, SlideRight, SlideUp } from "../../../utility/animation";
+import { motion } from "framer-motion";
 
 const WhyInquire = () => {
   const cards = [
@@ -23,14 +24,26 @@ const WhyInquire = () => {
     <section className="flex flex-col md:flex-row justify-between items-center w-full font-serif min-h-screen overflow-hidden py-12 px-10 gap-12">
       {/* Left Side */}
       <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
-        <h1 className="text-[#CF3528] text-4xl sm:text-5xl lg:text-6xl italic text-left">
+        <motion.h1
+          variants={SlideRight(0.2)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-[#CF3528] text-4xl sm:text-5xl lg:text-6xl italic text-left"
+        >
           Why Inquire?
-        </h1>
+        </motion.h1>
 
-        <p className="text-gray-800 leading-relaxed text-xl sm:text-base lg:text-lg text-left">
+        <motion.p
+          variants={SlideRight(0.4)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-gray-800 leading-relaxed text-xl sm:text-base lg:text-lg text-left"
+        >
           By filling out our inquiry form, you open the door to a personalized
           admissions experience. You’ll receive:
-        </p>
+        </motion.p>
 
         {/* Cards */}
         <div className="space-y-6 mt-6">
@@ -42,20 +55,38 @@ const WhyInquire = () => {
               <div className="text-3xl sm:text-4xl font-bold text-gray-700">
                 {card.id}
               </div>
-              <p className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed text-left">
+              <motion.p
+                variants={SlideRight(0.6)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed text-left"
+              >
                 {card.text}
-              </p>
+              </motion.p>
             </div>
           ))}
         </div>
 
         {/* After cards paragraph */}
-        <p className="text-[#012974] leading-relaxed mt-8 text-xl sm:2xl font-bold md:text-2xl italic text-left">
+        <motion.p
+          variants={SlideRight(0.9)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="text-[#012974] leading-relaxed mt-8 text-xl sm:2xl font-bold md:text-2xl italic text-left"
+        >
           Invitations to open houses, school tours, and community events
-        </p>
+        </motion.p>
       </div>
       {/* Right Side */}
-      <div className="w-full md:w-1/2 relative flex justify-center">
+      <motion.div
+        variants={SlideUp(0.5)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="w-full md:w-1/2 relative flex justify-center"
+      >
         {/* Main Image */}
         <img
           src="/about/bg.jpg"
@@ -72,7 +103,7 @@ const WhyInquire = () => {
             <div className="bg-blue-600 h-4 sm:h-7 w-4 sm:w-7 rounded-full" />
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

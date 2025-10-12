@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { SlideLeft, SlideRight, SlideUp } from "../../../utility/animation";
+import { motion } from "framer-motion";
 
 const slides = ["/inquire/campus.jpg", "/about/campus.jpg", "/about/class.jpg"];
 
@@ -25,9 +27,15 @@ const Campus = () => {
   return (
     <div className="py-12">
       {/* Heading */}
-      <h2 className="text-center text-3xl sm:text-4xl lg:text-5xl italic text-red-700 mb-8 font-serif">
+      <motion.h2
+        variants={SlideUp(0.3)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-center text-3xl sm:text-4xl lg:text-5xl italic text-red-700 mb-8 font-serif"
+      >
         Our Campus
-      </h2>
+      </motion.h2>
 
       {/* Image Wrapper */}
       <div className="relative w-[90%] mx-auto h-[70vh] sm:h-[80vh] overflow-hidden rounded-xl shadow-lg">

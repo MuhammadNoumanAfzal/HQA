@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
-
+import { SlideLeft, SlideRight, SlideUp } from "../../../utility/animation";
+import { motion } from "framer-motion";
 const accordionData = [
   {
     title: "Getting to Houston Quran Academy",
@@ -99,7 +100,13 @@ export default function InfoSection() {
   return (
     <div className="w-full px-4 sm:px-8 py-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch font-serif">
       {/* Left Column (Accordion) */}
-      <div className="bg-white rounded-xl shadow-md border-1 border-gray-200 p-4 sm:p-6 flex flex-col h-full">
+      <motion.div
+        variants={SlideRight(0.3)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="bg-white rounded-xl shadow-md border-1 border-gray-200 p-4 sm:p-6 flex flex-col h-full"
+      >
         {accordionData.map((item, index) => (
           <div key={index} className="border-b last:border-none">
             <button
@@ -124,16 +131,24 @@ export default function InfoSection() {
             )}
           </div>
         ))}
-      </div>
+      </motion.div>
 
       {/* Right Column (Image) */}
-      <div className="hidden md:block w-full h-full ">
-        <img
-          src="/about/class.jpg"
-          alt="Campus"
-          className="w-full h-full object-cover rounded-xl shadow-md"
-        />
-      </div>
+      <section className="overflow-x-hidden">
+        <motion.div
+          variants={SlideLeft(0.6)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="hidden md:block w-full h-full overflow-hidden"
+        >
+          <img
+            src="/about/class.jpg"
+            alt="Campus"
+            className="w-full h-full object-cover rounded-xl shadow-md"
+          />
+        </motion.div>
+      </section>
     </div>
   );
 }

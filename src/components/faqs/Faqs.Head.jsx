@@ -1,3 +1,5 @@
+import { SlideLeft, SlideRight, SlideUp } from "../../../utility/animation";
+import { motion } from "framer-motion";
 const FaqsHead = () => {
   return (
     <section className=" py-12 px-10 flex flex-col items-center text-center font-serif bg-[#FFFDF5] ">
@@ -15,17 +17,29 @@ const FaqsHead = () => {
         </span>
       </div>
 
-      <h2 className="text-[#CF3528] text-2xl sm:text-3xl font-serif italic mb-4">
+      <motion.h2
+        variants={SlideRight(0.3)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-[#CF3528] text-2xl sm:text-3xl font-serif italic mb-4"
+      >
         Frequently Asked Questions{" "}
-      </h2>
+      </motion.h2>
 
       {/* Description */}
-      <p className="text-gray-800 max-w-4xl text-xl text-center mx-auto">
+      <motion.p
+        variants={SlideLeft(0.6)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="text-gray-800 max-w-4xl text-xl text-center mx-auto"
+      >
         Welcome to the HQA FAQ page. Here you'll find answers to some of the
         most commonly asked questions by parents and prospective families. If
         you don’t find what you’re looking for, feel free to{" "}
         <span className="font-semibold">Contact Us</span> directly.
-      </p>
+      </motion.p>
     </section>
   );
 };

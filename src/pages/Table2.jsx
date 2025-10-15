@@ -25,13 +25,13 @@ const Table2 = () => {
         <table className="w-full max-w-4xl text-sm sm:text-base border-collapse rounded-2xl overflow-hidden shadow-[0_15px_30px_5px_rgba(0,0,0,0.25),0_5px_10px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.2)]">
           <thead>
             <tr className="bg-[#00285E] text-white">
-              <th className="px-4 py-3 text-center border-r border-gray-300">
+              <th className="px-4 py-5 text-center border-r border-gray-300">
                 Fee type
               </th>
-              <th className="px-4 py-3 text-center border-r border-gray-300">
+              <th className="px-4 py-5 text-center border-r border-gray-300">
                 Amount
               </th>
-              <th className="px-4 py-3 text-center">Notes</th>
+              <th className="px-4 py-5 text-center">Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -48,13 +48,13 @@ const Table2 = () => {
               },
             ].map((row, i) => (
               <tr key={i} className="bg-[#F2F7FF] text-gray-800">
-                <td className="px-4 py-3 border-r border-b border-gray-300 text-center">
+                <td className="px-4 py-5 border-r border-b border-gray-300 text-center">
                   {row.fee}
                 </td>
-                <td className="px-4 py-3 border-r border-b border-gray-300 text-center">
+                <td className="px-4 py-5 border-r border-b border-gray-300 text-center">
                   {row.amount}
                 </td>
-                <td className="px-4 py-3 border-b border-gray-300 text-center">
+                <td className="px-4 py-5 border-b border-gray-300 text-center">
                   {row.notes}
                 </td>
               </tr>

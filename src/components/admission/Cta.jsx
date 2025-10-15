@@ -60,9 +60,9 @@ const Cta = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="flex items-center gap-2 cursor-pointer bg-white text-[#CF3528] px-6 py-3 rounded-lg shadow-md text-sm sm:text-base md:text-lg transition hover:scale-105"
+        className="flex items-center gap-2 cursor-pointer hover:bg-[#00285E] hover:text-white bg-white text-[#CF3528] px-6 py-3 rounded-lg shadow-md text-sm sm:text-base md:text-lg transition hover:scale-105"
       >
-        Apply Now <FaArrowRight className="text-[#CF3528]" />
+        Apply Now <FaArrowRight className="text-[#CF3528] hover:text-white" />
       </motion.button>
 
       {/* Social Icons */}

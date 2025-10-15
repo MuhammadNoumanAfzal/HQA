@@ -24,7 +24,7 @@ const pillars = [
     bullets: [],
     para: "The examination covers material from the student’s previous year. For example, a student applying for 3rd grade will be tested on end-of-2nd grade material. The placement test is ",
     para2: "Note: There is a $30 placement testing fee per child.",
-    img: "/enrollement/step1.jpg",
+    img: "/admission/step2.jpg",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const pillars = [
     text: `The Principal will review each student’s file and may request an interview with the student and parents. `,
     bullets: [],
     para: "Once the principal approves an application. You will then be notified by phone if your child passed and met the school requirements.",
-    img: "/enrollement/step1.jpg",
+    img: "/admission/step3.jpg",
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const pillars = [
     text: `When accepted, fill out the registration forms to guarantee your child’s seat or be placed on a waiting list. `,
     bullets: [],
     para: "Submit all documents via fax or in person.  Please note: in order to expedite your registration, submit all documents at once.   Incomplete application will not be processed.",
-    img: "/enrollement/step1.jpg",
+    img: "/admission/step4.jpg",
   },
 ];
 

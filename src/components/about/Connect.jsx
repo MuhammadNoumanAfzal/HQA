@@ -107,7 +107,7 @@ const Connect = ({
                bg-[#00285E] border border-[#00285E] 
                text-white text-sm font-medium 
                shadow-md hover:bg-[#013b85] 
-               focus:outline-none focus-visible:ring-2 focus-visible:ring-[#00285E]/70"
+               focus:outline-none focus-visible:ring-2 rounded-md focus-visible:ring-[#00285E]/70"
           >
             {primaryCta.label}
           </a>

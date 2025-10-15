@@ -51,7 +51,7 @@ const Aid = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-[#CF3528] rounded-md  bg-white font-semibold px-6 sm:px-8 py-3  shadow-md transition-all duration-300 text-sm sm:text-base md:text-lg cursor-pointer"
+          className="text-[#CF3528] hover:bg-[#012974] hover:text-white rounded-md  bg-white font-semibold px-6 sm:px-8 py-3  shadow-md transition-all duration-300 text-sm sm:text-base md:text-lg cursor-pointer"
         >
           Tuition & Aid
         </motion.button>

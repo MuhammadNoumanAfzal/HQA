@@ -14,7 +14,7 @@ const Family = () => {
       <h2 className="text-4xl md:text-5xl italic  text-center mb-6 text-[#CF3528]">
         Meet our Family
       </h2>
-      <p className="text-center text-lg md:text-xl max-w-5xl mx-auto mb-10 text-gray-700">
+      <p className="text-center text-lg md:text-xl max-w-6xl mx-auto mb-10 text-gray-700">
         Our teachers bring together a dynamic blend of academic credentials,
         classroom experience, and spiritual insight. Whether teaching core
         subjects, Quranic studies, or enrichment programs, they lead with

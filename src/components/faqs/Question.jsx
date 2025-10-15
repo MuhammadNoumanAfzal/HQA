@@ -51,9 +51,9 @@ const Question = () => {
             <FaBuilding size={24} />
           </div>
           <p className="text-gray-800 text-lg">
-            Want to visit? <br />
+            Want to visit? Schedule a tour <br />
             <span className="text-[#CF3528] font-semibold cursor-pointer hover:underline">
-              here
+              Here
             </span>
           </p>
         </div>

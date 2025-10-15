@@ -74,13 +74,14 @@ const Patnership = () => {
           }
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          We’ve partnered again with East Essence, a trusted online Islamic
-          clothing store, for quality, affordable abayas for our female students
-          in Grades 5 through 12.
+          East Essence Uniforms for Girls (Grades 5–12) We’ve partnered again
+          with East Essence, a trusted online Islamic clothing store, for
+          quality, affordable abayas for our female students in Grades 5 through
+          12.
           <br />
           <br />
-          You’re welcome to order through East Essence or choose a tailor/vendor
-          of your choice. Just ensure the style and color follow our school’s
+          You’re welcome to order through East Essence Or choose a tailor/vendor
+          of your choice.Just ensure the style and color follow our school’s
           specifications.
         </motion.p>
 
@@ -99,7 +100,7 @@ const Patnership = () => {
           className="pt-4"
         >
           <button className="flex items-center gap-2 bg-[#00285E] text-white px-6 py-3 rounded-lg shadow-lg hover:bg-[#001d43] transition duration-300">
-            Explore More <FaArrowRight />
+            Order Now <FaArrowRight />
           </button>
         </motion.div>
       </div>

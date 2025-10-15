@@ -41,7 +41,7 @@ const Readiness = () => {
 
       {/* Two-column layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
-        {/* Left Side (Cards with numbers instead of images) */}
+        {/* Left Side (Cards) */}
         <div className="flex flex-col justify-center space-y-6">
           {cards.map((card) => (
             <div
@@ -49,7 +49,7 @@ const Readiness = () => {
               className={`flex items-start gap-4 border-4 bg-white ${card.border} rounded-xl shadow-xl p-6 sm:p-8 transition-transform duration-300 hover:scale-[1.02]`}
             >
               {/* Number Circle */}
-              <div className="w-12 h-12 flex items-center justify-center  text-[#00285E]  font-bold text-4xl">
+              <div className="w-12 h-12 flex items-center justify-center text-[#00285E] font-bold text-4xl">
                 {card.id}
               </div>
               <p className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed">
@@ -67,6 +67,14 @@ const Readiness = () => {
             className="w-full h-full object-cover rounded-2xl shadow-lg"
           />
         </div>
+      </div>
+
+      {/* Centered Paragraph Below */}
+      <div className="mt-12 text-center">
+        <p className="text-xl sm:text-2xl md:text-2xl italic text-gray-900 max-w-3xl mx-auto leading-relaxed">
+          “At HQA, we don’t just prepare students for college. We prepare them
+          for life—with confidence, character, and conviction.”
+        </p>
       </div>
     </section>
   );

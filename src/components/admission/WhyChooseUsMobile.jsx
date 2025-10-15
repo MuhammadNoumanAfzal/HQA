@@ -5,8 +5,7 @@ const pillars = [
   {
     id: 1,
     title: "Holistic Curriculum",
-    text: `Deepening faith through Quran memorization (Hifz), Salah, and character-building.
-Quranic Foundation: “Allah elevates those who believe and those who are given knowledge.” (Quran 58:11)`,
+    text: `A perfect blend of Quranic memorization, academic excellence, Arabic, and Islamic Studies — preparing students to thrive in both Dunya and Akhirah.`,
     img: "/admission/msg.jpg",
   },
   {

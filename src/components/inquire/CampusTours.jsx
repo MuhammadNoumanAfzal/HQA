@@ -5,17 +5,17 @@ const CampusTours = () => {
     {
       id: 1,
       number: "1",
-      text: "Meet our dedicated faculty and staff, ready to welcome your family with warmth and care.",
+      text: "A warm, student-guided tour of our classrooms, Qur’an study spaces, and community areas.",
     },
     {
       id: 2,
       number: "2",
-      text: "Tour our classrooms, prayer spaces, and facilities that create a balanced learning environment.",
+      text: "A one-on-one interview with our Admissions Team to get to know your family, answer your questions, and understand your goals for your child’s future.",
     },
     {
       id: 3,
       number: "3",
-      text: "Gain insights into our academic programs, extracurriculars, and spiritual activities.",
+      text: "Tours and interviews are available on weekdays while classes are in session, and on select Saturdays—giving you a real glimpse into daily life at HQA.",
     },
   ];
 
@@ -125,12 +125,12 @@ const CampusTours = () => {
             <img
               src="/inquire/c2.jpg"
               alt="Campus Life"
-              className="w-full h-32 sm:h-40 md:h-56 object-cover rounded-lg shadow-md"
+              className="w-full h-32 sm:h-40 md:h-74 object-cover rounded-lg shadow-md"
             />
             <img
               src="/inquire/c1.jpg"
               alt="Campus Students"
-              className="w-full h-32 sm:h-40 md:h-56 object-cover rounded-lg shadow-md"
+              className="w-full h-32 sm:h-40 md:h-74 object-cover rounded-lg shadow-md"
             />
           </div>
         </div>

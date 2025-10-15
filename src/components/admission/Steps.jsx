@@ -15,7 +15,7 @@ const pillars = [
       "State Test Scores (Elementary & Up)",
       "High School Transcripts (If Applicable)",
     ],
-    img: "/enrollement/step1.jpg",
+    img: "/admission/step1.jpg",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const pillars = [
       "A non-refundable testing fee must be paid before the test date.",
       "Testing slots fill quickly, so please complete this step promptly.",
     ],
-    img: "/enrollement/step1.jpg",
+    img: "/admission/step2.jpg",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const pillars = [
       "Available space in the relevant grade",
     ],
     para: "You’ll receive a decision notification shortly after the review process is completed.",
-    img: "/enrollement/step1.jpg",
+    img: "/admission/step3.jpg",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const pillars = [
     ],
     para: "Complete the final registration process, including payment of the Registration Fee, to secure your child’s seat.",
 
-    img: "/enrollement/step1.jpg",
+    img: "/admission/step4.jpg",
   },
 ];
 

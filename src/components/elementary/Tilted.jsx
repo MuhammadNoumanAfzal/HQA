@@ -1,72 +1,70 @@
-import { FaArrowRight } from "react-icons/fa";
+import React from "react";
 
 const requirements = [
-  {
-    title: "Montessori Method",
-    text: "Hands-on, child-centered learning that nurtures independence, social skills, and a lifelong love of discovery.",
-  },
-  {
-    title: "Qur’an Time",
-    text: "Daily recitation and storytelling from the Sunnah to build early spiritual connections.",
-  },
-  {
-    title: "Flexible Care",
-    text: "Mon–Thurs: 8 AM – 3 PM •",
-    timing: "Fri: 8 AM – 1 PM (extended day until 5 PM)",
-  },
+  "Memorize and recite Qur’an with proper Tajweed",
+  "Explore Islamic history and seerah",
+  "Engage in daily duas and moral stories",
+  "Practice adab (manners), akhlaq (character), and salaah (prayer routines)",
 ];
 
-const Foundation = () => {
+const Tilted = () => {
   return (
-    <section className="py-12 px-10 font-serif">
+    <section className="py-12 px-10 bg-[#FFFDF5] font-serif">
       {/* Heading */}
-      <h2 className="text-4xl md:text-5xl italic mb-10 text-[#00285E]">
-        Montessori & <span className="text-[#CF3528]">Qur’an Foundations</span>
+      <h2 className="text-4xl md:text-5xl italic text-center mb-6 text-[#CF3528]">
+        <span className="text-[#00285E]">Integrated Islamic</span> Learning{" "}
       </h2>
+      <p className="text-center text-lg md:text-2xl max-w-5xl mx-auto mb-10 text-gray-700">
+        Faith and academics go hand in hand at HQA. Our Elementary students:{" "}
+      </p>
 
-      <div className="w-full grid md:grid-cols-2 items-stretch gap-4">
-        {/* Left Side (Cards) */}
-        <div className="flex flex-col space-y-3 h-full">
+      <div className="w-full grid md:grid-cols-2 items-stretch gap-6">
+        {/* Left Side (Cards with shrink effect) */}
+        <div className="flex flex-col space-y-4 h-full">
           {requirements.map((req, index) => {
-            const isDark = index % 2 === 0; // alternate color
+            const isDark = index % 2 === 0;
             return (
               <div
                 key={index}
                 style={{
                   width: `calc(100% - ${index * 2}%)`, // shrink effect
                 }}
-                className={`flex flex-col p-6 rounded-lg transition-all duration-300 clip-card ${
-                  isDark
-                    ? "bg-[#00285E] text-white"
-                    : "bg-[#BCDDFC] text-[#00285E]"
-                }`}
+                className={`flex items-center p-6 clip-card transition-all duration-300
+                  ${
+                    isDark
+                      ? "bg-[#00285E] text-white"
+                      : "bg-[#BCDDFC] text-[#00285E]"
+                  }
+                `}
               >
-                <h3 className="text-2xl font-semibold mb-2">{req.title}</h3>
-                <p className="text-lg leading-relaxed">{req.text}</p>
-                {req.timing && (
-                  <p className="text-lg font-medium mt-1">{req.timing}</p>
-                )}
+                <p
+                  className="text-xl"
+                  dangerouslySetInnerHTML={{ __html: req }}
+                />
               </div>
             );
           })}
         </div>
 
-        {/* Right Side (Image) */}
+        {/* Right Side (Image with tilt effect) */}
         <div className="relative shadow-lg overflow-hidden w-full h-full clip-left">
           <img
             src="/admission/library.jpg"
             alt="Library"
-            className="w-full h-full object-cover"
+            className="w-full h-[400px] md:h-[380px] object-cover"
           />
         </div>
       </div>
 
-      {/* Button */}
-      <button className="bg-[#CF3528] mt-8 text-white px-6 py-2 rounded-lg shadow-md hover:bg-[#b02b20] transition duration-300 flex items-center gap-2">
-        Lea\trn More <FaArrowRight className="text-sm" />
-      </button>
+      {/* Centered Paragraphs Below */}
+      <div className="mt-12 text-center">
+        <p className="text-[#CF3528] text-2xl md:text-3xl  mb-2">Goal:</p>
+        <p className="text-gray-800 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+          To instill taqwa, empathy, and leadership from a young age.
+        </p>
+      </div>
     </section>
   );
 };
 
-export default Foundation;
+export default Tilted;

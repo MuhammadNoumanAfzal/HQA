@@ -52,7 +52,7 @@ const Heritage = () => {
         variants={SlideRight(1)}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="text-gray-800 max-w-4xl text-xl  leading-relaxed"
+        className="text-gray-800 max-w-6xl text-xl  leading-relaxed"
       >
         At Houston Quran Academy, we are committed to providing exceptional
         academic and spiritual education at a fair and transparent cost. Below

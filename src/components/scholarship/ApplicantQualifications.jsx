@@ -29,39 +29,41 @@ const ApplicantQualifications = () => {
       </ul>
 
       {/* Table */}
-      <div className="overflow-x-auto flex justify-center mb-8">
-        <table className="w-full max-w-3xl border border-gray-300 rounded-lg text-sm sm:text-base border-collapse table-fixed shadow-[12px_12px_20px_rgba(0,0,0,0.5)] mb-12">
-          <thead>
-            <tr className="bg-[#00285E] text-white">
-              <th className="px-4 py-2 border-r border-gray-300 text-center w-1/2">
-                Grade Level
-              </th>
-              <th className="px-4 py-2 text-center w-1/2">
-                Minimum Ajzaa Memorized
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              { grade: "1st Grade", ajzaa: "1" },
-              { grade: "2nd Grade", ajzaa: "2" },
-              { grade: "3rd Grade", ajzaa: "4" },
-              { grade: "4th Grade", ajzaa: "6" },
-              { grade: "5th Grade", ajzaa: "9" },
-              { grade: "Middle School", ajzaa: "15" },
-              { grade: "High School", ajzaa: "20" },
-            ].map((row, i) => (
-              <tr key={i} className="bg-[#F2F7FF] text-gray-800">
-                <td className="px-4 py-2 border-r border-gray-300 border-b text-center w-1/2">
-                  {row.grade}
-                </td>
-                <td className="px-4 py-2 border-b border-gray-300 text-center w-1/2">
-                  {row.ajzaa}
-                </td>
+      <div className="overflow-x-auto flex justify-center pb-16 mb-8">
+        <div className="w-full max-w-3xl rounded-3xl shadow-[12px_12px_20px_rgba(0,0,0,0.5)] overflow-hidden">
+          <table className="w-full border border-gray-300 text-sm sm:text-base border-collapse table-fixed">
+            <thead>
+              <tr className="bg-[#00285E] text-white">
+                <th className="px-4 py-5 border-r border-gray-300 text-center w-1/2">
+                  Grade Level
+                </th>
+                <th className="px-4 py-5 text-center w-1/2">
+                  Minimum Ajzaa Memorized
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {[
+                { grade: "1st Grade", ajzaa: "1" },
+                { grade: "2nd Grade", ajzaa: "2" },
+                { grade: "3rd Grade", ajzaa: "4" },
+                { grade: "4th Grade", ajzaa: "6" },
+                { grade: "5th Grade", ajzaa: "9" },
+                { grade: "Middle School", ajzaa: "15" },
+                { grade: "High School", ajzaa: "20" },
+              ].map((row, i) => (
+                <tr key={i} className="bg-[#F2F7FF] text-gray-800">
+                  <td className="px-4 py-5 border-r border-gray-300 border-b text-center w-1/2">
+                    {row.grade}
+                  </td>
+                  <td className="px-4 py-5 border-b border-gray-300 text-center w-1/2">
+                    {row.ajzaa}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {/* Good Standing */}

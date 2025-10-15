@@ -79,7 +79,7 @@ export default function StudentGrowth() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="text-[#CF3528] inline-block"
+            className="text-[#CF3528] italic inline-block"
           >
             Rising by the Numbers
           </motion.span>

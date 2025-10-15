@@ -16,7 +16,7 @@ const WhyInquire = () => {
     {
       id: 3,
       border: "border-[#012974]",
-      text: "Direct guidance from our admissions team to help you plan your child’s enrollment journey.",
+      text: "Let us help you discover what makes HQA a unique and nurturing place for academic excellence and spiritual growth.",
     },
   ];
 

@@ -29,7 +29,7 @@ const Administeration = () => {
 
         <div className="relative shadow-[0_0_30px_rgba(0,0,0,0.25)] flex flex-col justify-center items-center px-10 mb-16 rounded-lg">
           {/* Blue div behind the whole card */}
-          <div className="absolute -top-3 left-2 md:-left-4 z-[-1] w-[20%] h-90 rounded-[5px] shadow-xl bg-[#00285E]"></div>
+          <div className="absolute -top-3 left-2 md:-left-4 z-[-1] w-[20%] md:w-[30%] h-90 rounded-[5px] shadow-xl bg-[#00285E]"></div>
 
           {/* Main content (image + heading + short para on desktop) */}
           <div className="flex flex-col md:flex-row justify-center items-center md:space-x-11 space-y-4 md:space-y-0">
@@ -39,7 +39,7 @@ const Administeration = () => {
               alt="Dr. Hamed Ghazali"
             />
             <div className="w-full">
-              <h1 className="text-[#00285E] italic mb-6 text-3xl">
+              <h1 className="text-[#00285E] itali text-3xl">
                 Dr. Hamed Ghazali
               </h1>
               <h4 className="text-[#00285E] italic mb-6 text-2xl">
@@ -104,13 +104,13 @@ const Administeration = () => {
                 {/* Image */}
                 <img
                   className="h-56 md:h-64 rounded-[8px] w-full md:w-auto max-w-xs object-cover"
-                  src="/leadership/a2.jpg"
+                  src="/leadership/a3.jpg"
                   alt="Sr. Shamima Khalid"
                 />
 
                 {/* Text */}
                 <div className="w-full self-start">
-                  <h1 className="text-[#00285E] italic mb-4 text-3xl">
+                  <h1 className="text-[#00285E] italic  text-3xl">
                     Sr. Shamima Khalid
                   </h1>
                   <h4 className="text-[#00285E] italic mb-4 text-2xl">
@@ -172,13 +172,13 @@ const Administeration = () => {
                 {/* Image */}
                 <img
                   className="h-56 md:h-64 rounded-[8px] w-full md:w-auto max-w-xs object-cover"
-                  src="/leadership/a3.jpg"
+                  src="/leadership/a2.jpg"
                   alt="Sr. Shamima Khalid"
                 />
 
                 {/* Text aligned with image top */}
                 <div className="w-full self-start">
-                  <h1 className="text-[#00285E] italic mb-4 text-3xl">
+                  <h1 className="text-[#00285E] italic  text-3xl">
                     Sr. Shamima Khalid
                   </h1>
                   <h4 className="text-[#00285E] italic mb-4 text-2xl">

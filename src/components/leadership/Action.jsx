@@ -32,7 +32,7 @@ const Action = () => {
           <img
             src="/leadership/action.jpg"
             alt="HQA Admissions Team"
-            className="w-full h-full object-cover"
+            className="w-full h-full rounded-md object-cover shadow-[0_0_25px_rgba(0,0,0,0.3)]"
           />
         </div>
       </div>

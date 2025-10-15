@@ -4,7 +4,7 @@ export default function Cards() {
   const stats = [
     {
       title: "Admission Open:",
-      date: "Jan 10",
+      date: "January 10th",
       bg: "#FFFF",
       titleColor: "#CF3528",
       dateColor: "#252626",
@@ -25,7 +25,7 @@ export default function Cards() {
     },
     {
       title: "Rolling Admissions:",
-      date: "Availability",
+      date: "Based on Availability",
       bg: "#E3F1FF",
       titleColor: "#00285E",
       dateColor: "#252626",

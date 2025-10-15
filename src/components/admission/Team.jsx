@@ -47,7 +47,7 @@ const Team = () => {
             viewport={{ once: true }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl italic text-[#012974] mb-6 md:mb-10"
           >
-            Meet Our Students
+            Meet Our <span className="text-red-700">Students</span>
           </motion.h2>
           <motion.p
             variants={SlideRight(0.6)}

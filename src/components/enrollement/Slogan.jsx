@@ -43,9 +43,8 @@ const Slogan = () => {
           viewport={{ once: true }}
           className="text-white max-w-4xl text-xl leading-relaxed px-4 md:px-6 mb-4"
         >
-          "My years at HQA built my confidence to lead projects and advocate for
-          my peers. The school's emphasis on public speaking and service shaped
-          me into a proactive community member."
+          “I transferred here last year, and the warm welcome from teachers and
+          peers made me feel at home instantly.”
         </motion.p>
         <motion.p
           variants={SlideLeft(0.7)}
@@ -54,7 +53,7 @@ const Slogan = () => {
           viewport={{ once: true }}
           className="text-white max-w-3xl font-bold text-sm sm:text-base md:text-lg leading-relaxed mb-8 md:mb-12 px-4"
         >
-          — Samir Khan, Class of 2021
+          — Amina K., 7th Grade{" "}
         </motion.p>
 
         {/* Bottom Divider with comma icon */}

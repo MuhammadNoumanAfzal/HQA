@@ -25,10 +25,10 @@ const Table1 = () => {
         <table className="w-full max-w-4xl text-sm sm:text-base border-collapse rounded-2xl overflow-hidden shadow-[0_15px_30px_5px_rgba(0,0,0,0.25),0_5px_10px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.2)]">
           <thead>
             <tr className="bg-[#00285E] text-white">
-              <th className="px-4 py-3 text-center border-r border-gray-300">
+              <th className="px-4 py-5 text-center border-r border-gray-300">
                 Grade Level
               </th>
-              <th className="px-4 py-3 text-center border-r border-gray-300">
+              <th className="px-4 py-5 text-center border-r border-gray-300">
                 Monthly (Aug-May)
               </th>
               <th className="px-4 py-3 text-center">Annual Tuition</th>
@@ -40,13 +40,13 @@ const Table1 = () => {
               { grade: "6th - 12th Grade", ajzaa: "$750", tuition: "$7500" },
             ].map((row, i) => (
               <tr key={i} className="bg-[#F2F7FF] text-gray-800">
-                <td className="px-4 py-3 border-r border-b border-gray-300 text-center">
+                <td className="px-4 py-5 border-r border-b border-gray-300 text-center">
                   {row.grade}
                 </td>
-                <td className="px-4 py-3 border-r border-b border-gray-300 text-center">
+                <td className="px-4 py-5 border-r border-b border-gray-300 text-center">
                   {row.ajzaa}
                 </td>
-                <td className="px-4 py-3 border-b border-gray-300 text-center">
+                <td className="px-4 py-5 border-b border-gray-300 text-center">
                   {row.tuition}
                 </td>
               </tr>

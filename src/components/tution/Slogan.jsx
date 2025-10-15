@@ -25,15 +25,6 @@ const Slogan = () => {
           </div>
           <div className="flex-grow h-px bg-black ml-4 max-w-[50%]"></div>
         </motion.div>
-        <motion.p
-          variants={SlideRight(0.5)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-black max-w-3xl text-3xl leading-relaxed px-4 md:px-6 mb-4"
-        >
-          Parent Testimonial
-        </motion.p>
 
         {/* Description */}
         <motion.p

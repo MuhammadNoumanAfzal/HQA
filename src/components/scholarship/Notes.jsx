@@ -27,13 +27,10 @@ const Notes = () => {
         </li>
         <li>
           For support or clarification, reach out to our Admissions Office at{" "}
-          <a
-            href="mailto:skhalid@hquranacademy.org"
-            className="text-blue-600 underline"
-          >
+          <a href="mailto:skhalid@hquranacademy.org" className="">
             skhalid@hquranacademy.org
           </a>{" "}
-          or call <span className="font-semibold">281 717 4622</span>.
+          or call <span className="">281 717 4622</span>.
         </li>
       </ul>
     </section>

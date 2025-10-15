@@ -2,10 +2,13 @@ import React from "react";
 
 const AdvancedAcademics = () => {
   const cards = [
-    { img: "/pre/c1.jpg", title: "Advanced Placement (AP)" },
-    { img: "/pre/c2.jpg", title: "Dual Credit Courses" },
-    { img: "/pre/c3.jpg", title: "Honors Curriculum" },
-    { img: "/pre/c1.jpg", title: "STEM Programs" },
+    { img: "/pre/c1.jpg", title: "Honors Courses" },
+    { img: "/pre/c2.jpg", title: "Dual-Credit College Courses" },
+    { img: "/pre/c3.jpg", title: "Pre-AP and AP Courses & Exams" },
+    {
+      img: "/pre/c1.jpg",
+      title: "Electives in Technology, Leadership, and Islamic Studies",
+    },
   ];
 
   const subjects = [
@@ -13,7 +16,7 @@ const AdvancedAcademics = () => {
     "English I",
     "English II",
     "Algebra II",
-    "Biology",
+    "U.S History",
   ];
 
   return (

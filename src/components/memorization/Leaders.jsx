@@ -9,12 +9,15 @@ const Leaders = () => {
           <img
             src="/memorizaation/leader.jpg" // replace with your actual image path
             alt="Graduates celebrating"
-            className="w-full h-full object-cover rounded-lg shadow-2xl"
+            className="w-full h-full object-cover rounded-lg "
           />
         </div>
 
         {/* Right: Text Card */}
-        <div className="bg-white rounded-lg shadow-2xl p-6 md:p-8 flex flex-col justify-between h-full">
+        <div
+          className="bg-white rounded-lg shadow-[0_0_80px_rgba(0,0,0,0.25)]
+ p-6 md:p-8 flex flex-col justify-between h-full"
+        >
           <div>
             <h2 className="text-xl sm:text-2xl md:text-5xl italic text-[#00285E] mb-4">
               Shaping Tomorrow’s Leaders

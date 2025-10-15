@@ -7,7 +7,7 @@ const Notes = () => {
     <section className="py-12 px-10 font-serif bg-[#FFFDF5] text-center">
       {/* Heading */}
       <motion.h2
-        variants={SlideLeft(0.3)}
+        variants={SlideRight(0.3)}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -53,9 +53,9 @@ const Notes = () => {
             <FaBuilding size={24} />
           </div>
           <p className="text-gray-800 text-lg">
-            Want to visit? <br />
+            Send Email at: <br />
             <span className="text-[#CF3528] font-semibold cursor-pointer hover:underline">
-              here
+              skhalid@hquranacademy.org{" "}
             </span>
           </p>
         </div>

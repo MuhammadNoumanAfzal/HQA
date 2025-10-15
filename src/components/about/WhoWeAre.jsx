@@ -50,7 +50,7 @@ export default function WhoWeAreSection({
               {title}
             </motion.h2>
 
-            <div className="space-y-6 text-xl  leading-relaxed">
+            <div className=" md:space-y-6 text-xl  leading-relaxed">
               <motion.p
                 variants={SlideLeft(0.8)}
                 initial="hidden"
@@ -74,7 +74,7 @@ export default function WhoWeAreSection({
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 md:pt-4">
               {/* First Button */}
               <motion.a
                 variants={SlideButton(1.4)}
@@ -92,7 +92,7 @@ export default function WhoWeAreSection({
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 href={secondaryCta.href}
-                className="w-46 h-12 flex items-center justify-center border-1 border-white text-white  hover:bg-white hover:text-[#CF3528] transition-all"
+                className="w-46 h-12 flex items-center justify-center border-1 border-white text-white   hover:bg-[#CF3528] transition-all hover:border-0 rounded-md"
               >
                 {secondaryCta.label}
               </motion.a>

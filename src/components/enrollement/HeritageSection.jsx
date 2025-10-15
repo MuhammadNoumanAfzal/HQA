@@ -53,7 +53,7 @@ const Heritage = () => {
         variants={SlideRight(1)}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="text-gray-800 max-w-4xl text-xl leading-relaxed"
+        className="text-gray-800 max-w-6xl text-xl leading-relaxed"
       >
         Welcoming new families and continuing our journey with current students
         is a moment of pride at HQA. Whether you're enrolling for the first time

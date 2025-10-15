@@ -26,7 +26,7 @@ const Slogan = () => {
 
         {/* Bottom Divider with comma icon */}
         <div className="relative w-full flex items-center justify-center mt-8">
-          <div className="flex-grow h-px bg-white mr-4 max-w-[50%]"></div>
+          <div className="flex-grow h-px bg-[#00285E] mr-4 max-w-[40%]"></div>
           <div className="flex-shrink-0 px-4">
             <img
               src="/bcommaa.png"
@@ -34,7 +34,7 @@ const Slogan = () => {
               className="h-10 w-10 mx-auto"
             />
           </div>
-          <div className="flex-grow h-px bg-white ml-4 max-w-[50%]"></div>
+          <div className="flex-grow h-px bg-[#00285E] ml-4 max-w-[40%]"></div>
         </div>
       </div>
     </section>

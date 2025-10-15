@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 const ITBSSection = () => {
   const contentRef = useRef(null);
@@ -10,20 +11,21 @@ const ITBSSection = () => {
       items: [
         "Vocabulary",
         "Reading Comprehension",
-        "Writing Mechanics & Grammar",
-        "Spelling",
+        "Language & Writing Skills",
+        "Word Analysis (Grades K–2)",
+        "Listening Skills (Grades K–2)",
       ],
     },
     {
       heading: "Mathematics",
-      items: ["Math Concepts", "Computation Skills", "Problem Solving"],
+      items: ["Concepts & Estimation", "Math Computation", "Problem Solving"],
     },
     {
       heading: "Science & Social Studies",
       items: [
-        "General Science Understanding",
-        "Social Studies Concepts",
-        "Study Skills & Use of Resources",
+        "Scientific Inquiry",
+        "Social Studies Knowledge",
+        "Interpreting Information & Study Skills",
       ],
     },
   ];
@@ -44,7 +46,7 @@ const ITBSSection = () => {
   }, []);
 
   return (
-    <section className="w-full py-12 px-10 font-serif ">
+    <section className="w-full py-12 px-10 font-serif  pb-28">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         {/* Left side - Text Content */}
         <div className="flex flex-col gap-6" ref={contentRef}>
@@ -77,9 +79,15 @@ const ITBSSection = () => {
           ))}
 
           <p className="text-gray-800 text-base sm:text-lg lg:text-xl mt-4">
-            This dual-assessment model ensures that students are not only
-            meeting state expectations but are also nationally competitive.
+            These assessments help us identify areas of strength and growth
+            while personalizing instruction for every learner
           </p>
+          <div>
+            <button className="flex items-center justify-center gap-2 bg-[#00285E] text-white px-6 py-3 rounded-md font-medium hover:bg-[#CF3528] transition-all duration-300">
+              <span>Download Curriculum Guide</span>
+              <FaArrowRight className="text-white text-lg" />
+            </button>
+          </div>
         </div>
 
         {/* Right side - Images */}

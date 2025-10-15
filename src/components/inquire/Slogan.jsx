@@ -5,7 +5,7 @@ const Slogan = () => {
   return (
     <section
       className="relative bg-cover bg-center py-12  px-10 flex items-center justify-center text-center font-serif"
-      style={{ backgroundImage: "url('/admission/slogan.jpg')" }}
+      style={{ backgroundImage: "url('/inquire/bg.jpg')" }}
     >
       {/* Red Overlay */}
       <div className="absolute inset-0 bg-red-700/70"></div>
@@ -47,9 +47,8 @@ const Slogan = () => {
           viewport={{ once: true }}
           className="text-white max-w-5xl text-xl leading-relaxed px-4 md:px-6 mb-4"
         >
-          “The open-door policy here makes every voice matter. Administrators,
-          teachers, and students engage openly—fostering trust, collaboration,
-          and a genuine sense of belonging.”
+          “Joining HQA was the best decision for our family—our son’s confidence
+          and love for learning have skyrocketed.”
         </motion.p>
         <motion.p
           variants={SlideRight(0.9)}
@@ -58,7 +57,7 @@ const Slogan = () => {
           viewport={{ once: true }}
           className="text-white max-w-3xl font-bold text-sm sm:text-base md:text-lg leading-relaxed mb-8 md:mb-12 px-4"
         >
-          — HQA Parent{" "}
+          — The Ahmad Family, New to HQA{" "}
         </motion.p>
 
         {/* Bottom Divider with comma icon */}

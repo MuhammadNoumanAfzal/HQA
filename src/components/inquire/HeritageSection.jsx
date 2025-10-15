@@ -52,7 +52,7 @@ const Heritage = () => {
         variants={SlideRight(1)}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="text-gray-800 max-w-4xl text-xl leading-relaxed"
+        className="text-gray-800 max-w-6xl text-xl leading-relaxed"
       >
         We invite you and your family to tour our facilities, attend a live
         class, and witness the nurturing environment that will help your child

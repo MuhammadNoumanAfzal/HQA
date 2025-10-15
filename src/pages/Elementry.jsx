@@ -16,6 +16,8 @@ import Uniform from "../components/elementary/Uniform";
 import Tilted from "../components/elementary/Tilted";
 import TiltedMobile from "../components/elementary/TiltedMobile";
 import StudentLife from "../components/elementary/StudentLife";
+import BenchMark from "../components/elementary/BenchMark";
+import ITBSSection from "../components/elementary/ITBSSection";
 
 const Elementry = () => {
   return (
@@ -23,6 +25,8 @@ const Elementry = () => {
       <Hero />
       <Welcome />
       <Experience />
+      <BenchMark />
+      <ITBSSection />
 
       {/* Desktop version */}
       <div className="hidden md:block">

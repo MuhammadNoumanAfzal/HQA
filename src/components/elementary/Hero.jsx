@@ -10,7 +10,7 @@ const Hero = () => {
   const menuItems = [
     { text: "Pre-School", link: "/pre-school" },
     { text: "Elementary-School", link: "/elementry-school" },
-    { text: "Middel-School", link: "/middel-school" },
+    { text: "Middle-School", link: "/middel-school" },
     { text: "High-School", link: "/high-school" },
   ];
 

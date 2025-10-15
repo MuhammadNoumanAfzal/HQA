@@ -77,8 +77,7 @@ const Welcome = () => {
           }
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Educating Hearts and Minds for a <br />
-          Higher Purpose
+          Montessori-Based Education for <br /> Ages 18 Months – 5 Years
         </motion.h3>
 
         <motion.p
@@ -118,7 +117,7 @@ const Welcome = () => {
 
         {/* Background Shape */}
         <motion.div
-          className="bg-[#eb7f75] w-[120px] sm:w-[200px] h-[80px] sm:h-[150px] rounded-4xl absolute -right-4 sm:-right-8 -bottom-6 sm:-bottom-8 z-[-1]"
+          className="bg-[#74B9EA] w-[120px] sm:w-[200px] h-[80px] sm:h-[150px] rounded-4xl absolute -right-4 sm:-right-8 -bottom-6 sm:-bottom-8 z-[-1]"
           initial={{ opacity: 0, x: 20, y: 20 }}
           animate={
             isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: 20, y: 20 }

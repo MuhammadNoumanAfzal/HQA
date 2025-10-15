@@ -118,18 +118,18 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-6">
-          <button className="bg-[#0E2954] text-white px-5 py-2 rounded-md text-sm hover:bg-[#1a376b] transition">
+          <button className="bg-[#0B49BD] cursor-pointer text-white px-5 py-2 rounded-md text-sm hover:bg-[#1a376b] transition">
             INQUIRE{" "}
           </button>
 
           {isOpen ? (
             <FaTimes
-              className="text-3xl text-gray-800 cursor-pointer"
+              className="text-3xl  text-gray-800 cursor-pointer"
               onClick={() => setIsOpen(false)}
             />
           ) : (
             <FaBars
-              className="text-3xl text-gray-800 cursor-pointer"
+              className="text-3xl text-[#CECECE] cursor-pointer"
               onClick={() => setIsOpen(true)}
             />
           )}

@@ -67,7 +67,7 @@ const Slider = () => {
           className="
             absolute 
             top-[85%] left-1/2 -translate-x-1/2 bg-white
-            md:top-auto md:left-auto md:translate-x-0 md:bottom-22 md:right-170 
+            md:top-auto md:left-auto md:translate-x-0 md:bottom-22 md:right-160 
             w-[90%] sm:w-[70%] md:w-[45%] lg:w-[45%]
              shadow-lg rounded-lg p-6 md:p-8
           "

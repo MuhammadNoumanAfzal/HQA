@@ -37,23 +37,23 @@ const Community = () => {
       </div>
 
       {/* SECOND BLOCK */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-26 items-center mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-26 items-center pb-18 mt-26">
         {/* RIGHT SIDE */}
         <div className="relative flex justify-center order-1 md:order-none">
-          {/* Blue Background */}
-          <div className="bg-[#00285E] rounded-2xl w-[90%] h-full absolute top-2 left-6 sm:top-4 sm:left-10 md:left-20"></div>
+          {/* Blue Background (moved to right side) */}
+          <div className="bg-[#00285E] rounded-2xl w-[80%] h-full absolute top-2 right-6 sm:-top-6 sm:right-10 md:right-30"></div>
 
           {/* Image */}
           <img
             src="/student/community.jpg"
             alt="Community Involvement"
-            className="relative z-10 rounded-2xl shadow-lg w-[90%] object-cover"
+            className="relative z-10 rounded-2xl w-[90%] object-cover "
           />
         </div>
 
         {/* LEFT SIDE */}
         <div>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl italic mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl italic mt-28">
             <span className="text-red-700">Community Involvement</span> & <br />
             <span className="text-[#00285E]">Service Learning</span>
           </h2>

@@ -8,10 +8,10 @@ const accordionData = [
     content: (
       <>
         <p className="mb-2">
-          <strong>1901 Baker Rd</strong> <br />
+          <strong>1902 Baker Rd</strong> <br />
           Houston, TX 77094 <br />
           <strong>Mailing Address:</strong> <br />
-          P.O Box 690285 <br />
+          P.O Box 6385 <br />
           Katy, TX 77491
         </p>
         <p className="mb-2">
@@ -143,7 +143,7 @@ export default function InfoSection() {
           className="hidden md:block w-full h-full overflow-hidden"
         >
           <img
-            src="/about/class.jpg"
+            src="/inquire/info.jpg"
             alt="Campus"
             className="w-full h-full object-cover rounded-xl shadow-md"
           />

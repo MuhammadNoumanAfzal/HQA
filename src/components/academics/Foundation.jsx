@@ -43,7 +43,7 @@ const Foundation = () => {
                 }`}
               >
                 {/* Number without box */}
-                <p className="text-2xl mb-3 mt-1">{req.title}</p>
+                <p className="text-2xl mb-1 mt-1">{req.title}</p>
                 <p className="text-xl mb-1">{req.text}</p>
                 <p className="text-xl mb-3">{req.timing}</p>
               </div>
@@ -61,7 +61,7 @@ const Foundation = () => {
         </div>
       </div>
 
-      <button className="bg-[#CF3528] mt-8 text-white px-6 py-2 rounded-lg shadow-md hover:bg-[#b02b20] transition duration-300 flex items-center gap-2">
+      <button className="bg-[#CF3528] mt-8 text-white cursor-pointer px-8 py-3 rounded-lg shadow-md hover:bg-[#b02b20] transition duration-300 flex items-center gap-2">
         Learn More <FaArrowRight className="text-sm" />
       </button>
     </section>

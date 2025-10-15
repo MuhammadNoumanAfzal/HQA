@@ -49,7 +49,7 @@ const Next = () => {
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl lg:text-5xl italic ">
           {/* Red Part */}
-          <span className="text-[#CF3528]">
+          <span className="text-[#00285E]">
             {redLetters.map((letter, index) => (
               <motion.span
                 key={index}
@@ -66,7 +66,7 @@ const Next = () => {
             ))}
           </span>{" "}
           {/* Blue Part */}
-          <span className="text-[#00285E]">
+          <span className="text-[#CF3528]">
             {blueLetters.map((letter, index) => (
               <motion.span
                 key={index}

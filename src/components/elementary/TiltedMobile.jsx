@@ -1,9 +1,10 @@
 import React from "react";
 
 const requirements = [
-  "Introduce new programs in AI, digital literacy & interfaith awareness",
-  "Expand our facilities and scholarships to welcome more families",
-  "Strengthen social responsibility through civic and inter-community engagement",
+  "Memorize and recite Qur’an with proper Tajweed",
+  "Explore Islamic history and seerah",
+  "Engage in daily duas and moral stories",
+  "Practice adab (manners), akhlaq (character), and salaah (prayer routines)",
 ];
 
 const TiltedMobile = () => {

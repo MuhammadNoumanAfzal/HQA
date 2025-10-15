@@ -194,8 +194,8 @@ export default function FAQTabs({ data }) {
                 onClick={() => setActiveTab(tab)}
                 className={`px-12 py-2 rounded-md border text-sm sm:text-base font-medium transition-all ${
                   activeTab === tab
-                    ? "bg-[#00285E] text-white border-[#00285E] shadow-lg"
-                    : "bg-red-700 text-white border-gray-300 "
+                    ? "bg-[#00285E] text-white cursor-pointer border-[#00285E] shadow-lg"
+                    : "bg-red-700 text-white cursor-pointer border-gray-300 "
                 }`}
               >
                 {tab}

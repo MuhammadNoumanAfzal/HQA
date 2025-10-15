@@ -6,7 +6,7 @@ const Rooted = () => {
       {/* Two-column layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 ">
         {/* Left: Image - Order changes on mobile */}
-        <div className="order-2 md:order-1 w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[370px]">
+        <div className="order-2 md:order-1 w-full h-48 sm:h-64 md:h-80 lg:h-96 xl:h-[390px]">
           <img
             src="/alumni/msg.jpg"
             alt="HQA Admissions Team"

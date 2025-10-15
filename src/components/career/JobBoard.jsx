@@ -3,11 +3,11 @@ import { FaArrowRight } from "react-icons/fa";
 
 const jobs = [
   { title: "Maths Teacher", location: "Houston" },
-  { title: "Physics Teacher", location: "New York" },
-  { title: "Chemistry Teacher", location: "Los Angeles" },
-  { title: "English Teacher", location: "Chicago" },
-  { title: "Biology Teacher", location: "San Francisco" },
-  { title: "History Teacher", location: "Boston" },
+  { title: "Admin Office", location: "Houston" },
+  { title: "Admin Office", location: "Houston" },
+  { title: "Admin Office", location: "Houston" },
+  { title: "Math Teacher", location: "Houston" },
+  { title: "Math Teacher", location: "Houston" },
 ];
 
 const JobBoard = () => {
@@ -42,7 +42,7 @@ const JobBoard = () => {
         {jobs.map((job, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-xl shadow-[0_10px_25px_rgba(0,0,0,0.2)] flex justify-between items-center hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] transition-all duration-300 min-h-[150px] md:min-h-[180px]"
+            className="bg-white p-6 rounded-xl  border-1 border-gray-300 flex justify-between items-center hover:shadow-[0_15px_30px_rgba(0,0,0,0.25)] transition-all duration-300 min-h-[150px] md:min-h-[180px]"
           >
             {/* Title and location on left */}
             <div>

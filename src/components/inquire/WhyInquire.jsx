@@ -21,7 +21,7 @@ const WhyInquire = () => {
   ];
 
   return (
-    <section className="flex flex-col md:flex-row justify-between items-center w-full font-serif min-h-screen overflow-hidden py-12 px-10 gap-12">
+    <section className="flex flex-col md:flex-row justify-between items-center w-full font-serif min-h-screen overflow-hidden pb-12 pt-16 px-10 gap-12">
       {/* Left Side */}
       <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
         <motion.h1
@@ -29,7 +29,7 @@ const WhyInquire = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="text-[#CF3528] text-4xl sm:text-5xl lg:text-6xl italic text-left"
+          className="text-[#CF3528] text-4xl sm:text-5xl lg:text-5xl italic text-left"
         >
           Why Inquire?
         </motion.h1>
@@ -91,7 +91,7 @@ const WhyInquire = () => {
         <img
           src="/about/bg.jpg"
           alt="Graduation caps"
-          className="h-64 sm:h-80 lg:h-120 w-full object-cover rounded-4xl"
+          className="h-64 sm:h-80 lg:h-130 w-full object-cover rounded-4xl"
         />
 
         {/* Background Shape */}

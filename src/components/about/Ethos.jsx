@@ -129,7 +129,7 @@ const Ethos = () => {
               variants={SlideButton(0.3)}
               initial="hidden"
               animate="visible"
-              className="bg-white border-2 border-[#CF3528] rounded-full h-8 w-8 flex items-center justify-center shadow-md"
+              className="bg-white border-2 cursor-pointer border-[#CF3528] rounded-full h-8 w-8 flex items-center justify-center shadow-md"
             >
               <FaArrowLeft className="text-[#CF3528] text-xs" />
             </motion.button>
@@ -139,7 +139,7 @@ const Ethos = () => {
               variants={SlideButton(0.4)}
               initial="hidden"
               animate="visible"
-              className="bg-[#CF3528] text-white rounded-full h-8 w-8 flex items-center justify-center shadow-md"
+              className="bg-[#CF3528]  cursor-pointer text-white rounded-full h-8 w-8 flex items-center justify-center shadow-md"
             >
               <FaArrowRight className="text-xs" />
             </motion.button>
@@ -151,7 +151,7 @@ const Ethos = () => {
             variants={SlideButton(0.3)}
             initial="hidden"
             animate="visible"
-            className="absolute -left-3 md:-left-4 top-1/2 transform -translate-y-1/2 bg-white border-2 border-[#CF3528] rounded-full h-7 w-7 md:h-8 md:w-8 items-center justify-center shadow-md hidden sm:flex"
+            className="absolute -left-3 md:-left-4 top-1/2 transform -translate-y-1/2  cursor-pointer bg-white border-2 border-[#CF3528] rounded-full h-7 w-7 md:h-8 md:w-8 items-center justify-center shadow-md hidden sm:flex"
           >
             <FaArrowLeft className="text-[#CF3528] text-xs md:text-sm" />
           </motion.button>
@@ -161,7 +161,7 @@ const Ethos = () => {
             variants={SlideButton(0.4)}
             initial="hidden"
             animate="visible"
-            className="absolute -right-3 md:-right-4 top-1/2 transform -translate-y-1/2 bg-[#CF3528] text-white rounded-full h-7 w-7 md:h-8 md:w-8 items-center justify-center shadow-md hidden sm:flex"
+            className="absolute  cursor-pointer -right-3 md:-right-4 top-1/2 transform -translate-y-1/2 bg-[#CF3528] text-white rounded-full h-7 w-7 md:h-8 md:w-8 items-center justify-center shadow-md hidden sm:flex"
           >
             <FaArrowRight className="text-xs md:text-sm" />
           </motion.button>
@@ -183,7 +183,7 @@ const Ethos = () => {
             initial="hidden"
             animate="visible"
           >
-            The HQA{" "}
+            The HQA&nbsp;
           </motion.span>
           <motion.span
             className="text-blue-700 inline-block"

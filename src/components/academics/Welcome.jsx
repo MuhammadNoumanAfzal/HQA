@@ -46,7 +46,7 @@ const Welcome = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col md:flex-row justify-between items-center w-full font-serif min-h-screen overflow-hidden py-12 px-10 gap-12"
+      className="flex flex-col md:flex-row justify-between items-center w-full font-serif min-h-screen overflow-hidden pb-12 pt-18 px-10 gap-12"
     >
       {/* Left Side */}
       <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
@@ -111,7 +111,7 @@ const Welcome = () => {
       <div className="w-full md:w-1/2 relative flex justify-center">
         {/* Main Image */}
         <motion.img
-          src="/about/bg.jpg"
+          src="/academics/bg.jpg"
           alt="Graduation caps"
           className="h-64 sm:h-80 lg:h-120 w-full object-cover rounded-4xl"
           initial={{ opacity: 0, scale: 0.8 }}

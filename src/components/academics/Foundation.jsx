@@ -43,8 +43,8 @@ const Foundation = () => {
                 }`}
               >
                 {/* Number without box */}
-                <p className="text-2xl mb-3">{req.title}</p> <br />
-                <p className="text-xl mb-3">{req.text}</p>
+                <p className="text-2xl mb-3 mt-1">{req.title}</p>
+                <p className="text-xl mb-1">{req.text}</p>
                 <p className="text-xl mb-3">{req.timing}</p>
               </div>
             );

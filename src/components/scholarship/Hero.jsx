@@ -37,7 +37,7 @@ const Hero = () => {
             viewport={{ once: true, amount: 0.3 }}
             className="text-white text-3xl sm:text-5xl md:text-6xl italic drop-shadow-lg text-center"
           >
-            Enrolment & Re-enrolment{" "}
+            Scholarship{" "}
           </motion.h1>
         </div>
       </div>

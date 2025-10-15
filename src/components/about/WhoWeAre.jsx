@@ -5,7 +5,7 @@ import { SlideLeft, SlideRight, SlideButton } from "../../../utility/animation";
 export default function WhoWeAreSection({
   title = "Who We Are",
   primaryCta = { label: "Meet the Team", href: "#" },
-  secondaryCta = { label: "Learn More", href: "#" },
+  secondaryCta = { label: "Meet the Team", href: "#" },
 }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, threshold: 0.2 });
@@ -28,14 +28,14 @@ export default function WhoWeAreSection({
             <motion.img
               src="/about/class.jpg"
               alt="Instructor writing on a chalkboard"
-              className="absolute left-0 top-0 h-[70%] w-[78%] md:h-[94%] md:w-[80%] rounded-2xl object-cover shadow-xl ring-2 ring-white/10 transition-transform duration-500 hover:scale-105"
+              className="absolute left-0 top-12 h-[70%] w-[78%] md:h-[85%] md:w-[70%] border-4 border-white rounded-2xl object-cover shadow-xl  ring-2 ring-white/10 transition-transform duration-500 hover:scale-105"
             />
 
             {/* Overlapping Image */}
             <motion.img
-              src="/about/hero.jpg"
+              src="/about/campus.jpg"
               alt="School campus walkway"
-              className="absolute bottom-34 right-0 h-[52%] w-[45%] rounded-2xl border-4 border-white object-cover shadow-xl transition-transform duration-500 hover:scale-105"
+              className="absolute bottom-20 md:bottom-34 right-0 h-[52%] w-[40%] rounded-2xl border-4 border-white object-cover shadow-xl transition-transform duration-500 hover:scale-105"
             />
           </motion.div>
 
@@ -81,7 +81,7 @@ export default function WhoWeAreSection({
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 href={primaryCta.href}
-                className="w-46 h-12 flex items-center justify-center bg-[#CF3528] text-white  shadow-md hover:bg-[#b32d22] transition-all"
+                className="w-46 h-12 rounded-md flex items-center justify-center  bg-[#CF3528] text-white  shadow-md hover:bg-[#b32d22] transition-all"
               >
                 {primaryCta.label}
               </motion.a>

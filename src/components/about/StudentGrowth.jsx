@@ -70,7 +70,7 @@ export default function StudentGrowth() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="text-[#00285E] inline-block"
+            className="text-[#00285E] italic inline-block"
           >
             HQA Student Growth -
           </motion.span>{" "}
@@ -93,7 +93,7 @@ export default function StudentGrowth() {
           viewport={{ once: true, amount: 0.3 }}
           className="text-lg sm:text-xl md:text-2xl text-[#252626] italic mb-6 px-2"
         >
-          Building knowledge, faith, and excellence together
+          Growing in Faith, Knowledge, and Numbers{" "}
         </motion.p>
 
         {/* Paragraph */}
@@ -125,7 +125,7 @@ export default function StudentGrowth() {
               className={`rounded-xl md:rounded-2xl shadow-sm md:shadow-md p-3 sm:p-4 md:p-8 flex flex-col items-center transition-all duration-300 hover:scale-105 
                 ${
                   index === stats.length - 1
-                    ? "col-span-2 sm:col-span-1 w-full pt-8 pb-8 mx-0" 
+                    ? "col-span-2 sm:col-span-1 w-full pt-8 pb-8 mx-0"
                     : "w-full max-w-[180px] sm:max-w-[200px] mx-auto"
                 }`}
               style={{ backgroundColor: item.bg }}

@@ -2,8 +2,24 @@ import React, { useState } from "react";
 import { HiDotsVertical } from "react-icons/hi";
 import { SlideUp } from "../../../utility/animation.js";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 const Hero = () => {
   const [open, setOpen] = useState(false);
+
+  const headings = [
+    { name: "Admissions", link: "/admission" },
+    { name: "Academics", link: "/academics" },
+    { name: "Tuition Fee", link: "/tution-fee" },
+    { name: "Leadership", link: "/leadership" },
+    { name: "Scholarship", link: "/scholarship" },
+    { name: "Faculty & Staff Directory", link: "/faculty" },
+    { name: "Quran Memorization Program", link: "/memorizaton" },
+    { name: "Athletics at HQA", link: "/athelatics" },
+    { name: "Student Life", link: "/student-life" },
+    { name: "History", link: "/histroy" },
+    { name: "FAQs", link: "/faqs" },
+  ];
 
   return (
     <div className="w-full flex flex-col items-center px-8 pt-12 font-serif">
@@ -29,16 +45,16 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Subheadings*/}
+      {/* Subheadings */}
       <div
         className="
-          relative mt-[-2rem] w-[90%] sm:w-[80%] md:w-[80%] 
-          rounded-2xl shadow-lg p-4 sm:p-6
-          bg-white text-black
+          relative mt-[-2rem] w-[90%] sm:w-[80%] md:w-[95%] 
+          rounded-2xl shadow-lg p-4 sm:p-6 
+          bg-white text-black text-center flex flex-col items-center justify-center
         "
       >
         {/* -------- Mobile View -------- */}
-        <div className="flex justify-between items-center md:hidden">
+        <div className="flex justify-between items-center md:hidden w-full max-w-4xl">
           {/* Left Side - Menu */}
           <p className="font-semibold cursor-pointer">Menu</p>
 
@@ -51,34 +67,34 @@ const Hero = () => {
           </button>
         </div>
 
-        {/* Dropdown  */}
+        {/* Dropdown */}
         {open && (
-          <div className="md:hidden mt-2 flex flex-col items-center gap-2 transition-all duration-300">
-            {Array(6)
-              .fill("Sub Heading")
-              .map((text, i) => (
-                <p
-                  key={i}
-                  className="hover:bg-red-100 p-2 rounded cursor-pointer text-center w-full"
-                >
-                  {text}
-                </p>
-              ))}
+          <div className="md:hidden mt-2 flex flex-col items-center gap-2 transition-all duration-300 w-full max-w-4xl">
+            {headings.map((item, i) => (
+              <Link
+                key={i}
+                to={item.link}
+                className="hover:bg-red-100 p-2 rounded cursor-pointer text-center w-full"
+                onClick={() => setOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
         )}
 
         {/* -------- Desktop View: Grid -------- */}
-        <div className="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 text-center">
-          {Array(12)
-            .fill("Sub Heading")
-            .map((text, i) => (
-              <p
-                key={i}
-                className="text-black hover:opacity-80 cursor-pointer text-xs sm:text-sm md:text-base"
-              >
-                {text}
-              </p>
-            ))}
+        {/* -------- Desktop View: Grid -------- */}
+        <div className="hidden md:flex flex-wrap justify-center items-center gap-3 sm:gap-4 text-center w-full max-w-6xl">
+          {headings.map((item, i) => (
+            <Link
+              key={i}
+              to={item.link}
+              className="text-black hover:opacity-80 cursor-pointer text-xs sm:text-sm md:text-base w-[150px] text-center"
+            >
+              {item.name}
+            </Link>
+          ))}
         </div>
       </div>
     </div>

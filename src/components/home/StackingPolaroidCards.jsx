@@ -15,7 +15,7 @@ export default function StackingPolaroidCards({ seed = 42 }) {
     { text: "Community Service & Competitions", icon: "/i4.gif" },
     { text: "Athletics & Tournaments", icon: "/i2.gif" },
     { text: "Accredited & Experienced Faculty", icon: "/i6.gif" },
-    { text: "Spiritual Journeys – Umrah", icon: "/i3.gif" },
+    { text: "Spiritual Journeys Umrah", icon: "/i3.gif" },
   ];
 
   const rng = useMemo(() => mulberry32(seed), [seed]);

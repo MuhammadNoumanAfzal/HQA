@@ -12,7 +12,7 @@ const slides = [
     description:
       "At Houston Quran Academy, we go beyond preparing students for graduation  we empower them to achieve greatness.",
     quote:
-      "Our graduates have earned admission into some of the most respected universities in the nation.",
+      "Our graduates have earned admission into some of the most respected universities in the nation",
   },
   {
     id: 2,
@@ -138,7 +138,7 @@ export default function ResponsiveSlider() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.6 }}
-              className="flex items-center gap-4 mb-4"
+              className="flex flex-col   gap-4 mb-4"
             >
               <img
                 src={slides[current].numberImg}
@@ -146,7 +146,7 @@ export default function ResponsiveSlider() {
                 className="w-16 h-22"
               />
               <p className="italic text-gray-700 text-xl ">
-                "{slides[current].quote}"
+                {slides[current].quote}
               </p>
             </motion.div>
           </AnimatePresence>

@@ -24,7 +24,6 @@ const About = () => {
       <Ethos />
       <BalanceSection />
       <Vision />
-      <StudentGrowth />
       {/* Desktop version */}
       <div className="hidden md:block">
         <Milestones />
@@ -34,6 +33,7 @@ const About = () => {
       <div className="block md:hidden">
         <MileStonesMbl />
       </div>
+      <StudentGrowth />
 
       <Future />
       <Connect />

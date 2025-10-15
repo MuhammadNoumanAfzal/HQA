@@ -51,7 +51,7 @@ const Heritage = () => {
         variants={SlideRight(1)}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="text-gray-800 max-w-4xl mt-6 text-xl leading-relaxed"
+        className="text-gray-800 max-w-5xl mt-6 text-xl leading-relaxed"
       >
         Founded with a deep-rooted mission to serve both our local and global
         communities, Houston Quran Academy honors a legacy of educational

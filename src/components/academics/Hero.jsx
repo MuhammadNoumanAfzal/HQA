@@ -8,11 +8,10 @@ const Hero = () => {
 
   // ✅ Menu items with links
   const menuItems = [
-    { text: "Inquire", link: "/inquire" },
-    { text: "Enrolment", link: "/enrollement" },
-    { text: "FAQs", link: "/faqs" },
-    { text: "Tuition Fee", link: "/tution-fee" },
-    { text: "Scholarship", link: "/scholarship" },
+    { text: "Pre-School", link: "/pre-school" },
+    { text: "Elementary-School", link: "/elementry-school" },
+    { text: "Middel-School", link: "/middel-school" },
+    { text: "High-School", link: "/high-school" },
   ];
 
   return (
@@ -79,13 +78,13 @@ const Hero = () => {
           </div>
         )}
 
-        {/* -------- Desktop View: Grid -------- */}
-        <div className="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 text-center">
+        {/* -------- Desktop View: Centered Grid -------- */}
+        <div className="hidden md:flex justify-center flex-wrap gap-12 text-center">
           {menuItems.map((item, i) => (
             <a
               key={i}
               href={item.link}
-              className="text-black hover:opacity-80 cursor-pointer text-xs sm:text-sm md:text-base"
+              className="text-black hover:opacity-80 cursor-pointer text-sm md:text-base"
             >
               {item.text}
             </a>

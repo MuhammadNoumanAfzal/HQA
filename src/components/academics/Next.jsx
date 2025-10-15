@@ -138,7 +138,7 @@ const Next = () => {
       {/* Right Side - Only Image */}
       <div className="w-full md:w-1/2 relative flex justify-center">
         <motion.img
-          src="/about/bg.jpg"
+          src="/academics/bg.jpg"
           alt="Graduation caps"
           className="h-64 sm:h-80 lg:h-120 w-full object-cover rounded-2xl"
           initial={{ opacity: 0, scale: 0.8 }}

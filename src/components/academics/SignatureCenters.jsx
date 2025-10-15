@@ -9,8 +9,8 @@ const SignatureCenters = () => {
     },
     {
       img: "/academics/l2.jpg",
-      title: "Science Innovation Lab",
-      text: "Hands-on experiments, modern lab equipment, and guided research projects—fostering curiosity and innovation.",
+      title: "STEM & Innovation Hub",
+      text: "State-of-the-art labs for robotics, coding, and scientific inquiry—where students prototype solutions to real-world problems.",
     },
     {
       img: "/academics/l3.jpg",
@@ -24,13 +24,17 @@ const SignatureCenters = () => {
     },
     {
       img: "/academics/l5.jpg",
-      title: "Visual Arts Studio",
-      text: "Creative expression through painting, sculpture, and digital art—nurturing imagination and confidence.",
+      title: "College Counseling Suite",
+      text: "Personalized guidance from Day 1: college research, application strategy, scholarship navigation, and alumni mentorship.",
     },
     {
       img: "/academics/l6.jpg",
-      title: "Sports & Wellness Program",
-      text: "Balanced physical training, nutrition awareness, and mental wellness activities to build strong, healthy individuals.",
+      title: "Experiential Learning",
+      bulletPoints: [
+        "Global Study Tours (Umrah, Spain, service in Lebanon)",
+        "Academic Competitions (Science fairs, Quran Bees, debate circuits)",
+        "In-School Internships with local NGOs and businesses",
+      ],
     },
   ];
 
@@ -55,12 +59,25 @@ const SignatureCenters = () => {
                 className="w-5/5 h-64 object-cover rounded-lg"
               />
             </div>
+
             <h3 className="text-2xl italic text-[#00285E] mb-3 text-left">
               {card.title}
             </h3>
-            <p className="text-gray-800 text-sm sm:text-base leading-relaxed text-left">
-              {card.text}
-            </p>
+
+            {/* Render bullet points only for the last card */}
+            {card.bulletPoints ? (
+              <ul className="list-disc list-outside pl-5 text-gray-800 text-sm sm:text-base leading-relaxed text-left space-y-1">
+                {card.bulletPoints.map((point, idx) => (
+                  <li key={idx} className="pl-1">
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-gray-800 text-sm sm:text-base leading-relaxed text-left">
+                {card.text}
+              </p>
+            )}
           </div>
         ))}
       </div>

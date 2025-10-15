@@ -33,12 +33,12 @@ const FaqsHead = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="text-gray-800 max-w-4xl text-xl text-center mx-auto"
+        className="text-gray-800 max-w-5xl text-xl text-center mx-auto"
       >
         Welcome to the HQA FAQ page. Here you'll find answers to some of the
         most commonly asked questions by parents and prospective families. If
-        you don’t find what you’re looking for, feel free to{" "}
-        <span className="font-semibold">Contact Us</span> directly.
+        you don’t find what you’re looking for, feel free to Contact Us
+        directly.
       </motion.p>
     </section>
   );

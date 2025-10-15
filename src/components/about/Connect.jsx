@@ -49,9 +49,9 @@ const Connect = ({
         {/* Animated Heading */}
         <h1 className="text-3xl sm:text-4xl lg:text-5xl italic font-serif ">
           {titleLetters.map((letter, i) => {
-            let colorClass = "text-[#CF3528]";
+            let colorClass = "text-[#00285E]";
             if (i >= 12) {
-              colorClass = "text-[#00285E]";
+              colorClass = "text-[#CF3528]";
             }
             return (
               <motion.span
@@ -116,9 +116,9 @@ const Connect = ({
           <a
             href={secondaryCta.href}
             className="w-48 h-12 flex items-center justify-center 
-               border border-gray-400 bg-transparent 
+               border border-[#00285E] rounded-md bg-transparent 
                text-gray-800 text-sm font-medium 
-               hover:bg-gray-100 
+               hover:bg-red-700 hover:text-white hover:border-0 
                focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-400/70"
           >
             {secondaryCta.label}
@@ -130,9 +130,9 @@ const Connect = ({
       <div className="w-full md:w-1/2 relative flex justify-center mt-10 md:mt-0">
         {/* Main Image */}
         <motion.img
-          src="/about/bg.jpg"
+          src="/about/connect.jpg"
           alt="Graduation caps"
-          className="h-64 sm:h-80 lg:h-[28rem] w-full object-cover rounded-lg"
+          className="h-64 sm:h-80 lg:h-[22rem] w-full object-cover rounded-lg"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -151,12 +151,12 @@ const Connect = ({
         <motion.div
           className="flex bg-white w-[90px] sm:w-[150px] h-[90px] sm:h-[150px] 
           absolute -left-6 sm:-left-8 -bottom-12 sm:-bottom-6 
-          justify-center items-center rounded-tr-[100px]"
+          justify-center items-center rounded-tr-[100px] rounded"
           initial={{ opacity: 0, scale: 0 }}
           animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
         >
-          <div className="bg-[#dfd7d7] h-[70px] sm:h-[100px] w-[70px] sm:w-[100px] rounded-full flex justify-center items-center">
+          <div className="bg-[#dfd7d7]  h-[70px] sm:h-[100px] w-[70px] sm:w-[100px] rounded-full flex justify-center items-center">
             <motion.div
               className="bg-blue-600 h-5 sm:h-7 w-5 sm:w-7 rounded-full"
               animate={isInView ? { scale: [1, 1.2, 1] } : { scale: 1 }}

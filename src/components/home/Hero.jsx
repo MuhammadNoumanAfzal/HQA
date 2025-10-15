@@ -11,6 +11,7 @@ import picture5 from "../../assets/img5.jpg";
 import picture6 from "../../assets/img6.jpg";
 import picture7 from "../../assets/img7.jpg";
 import SloganParallax from "./SloganParallax";
+import { img } from "framer-motion/client";
 
 const Hero = () => {
   const container = useRef(null);
@@ -18,7 +19,6 @@ const Hero = () => {
     target: container,
     offset: ["start start", "end end"],
   });
-
   /** 🔹 Zoom/scale effects */
   const scale4 = useTransform(scrollYProgress, [0, 0.7], [1, 2.6]);
   const scale5 = useTransform(scrollYProgress, [0, 0.7], [1, 2.8]);

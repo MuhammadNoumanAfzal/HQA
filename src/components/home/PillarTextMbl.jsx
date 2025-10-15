@@ -10,7 +10,7 @@ const PillarTextMbl = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
-        className="text-2xl sm:text-3xl md:text-6xl pt-12 text-gray-800 mb-4 mt-3 font-serif"
+        className="text-5xl sm:text-3xl md:text-6xl pt-12 text-gray-800 mb-4 mt-3 font-serif"
       >
         <span className="text-[#CF3528]">Core</span>{" "}
         <span className="text-[#00285E] italic">Pillars</span>

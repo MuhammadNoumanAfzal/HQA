@@ -95,9 +95,10 @@ const menuItems = [
     path: "/academics",
     submenu: [
       { name: "Pre-School", path: "/pre-school" },
+      { name: "Elementary-School", path: "/elementry-school" },
+
       { name: "Middel-School", path: "/middel-school" },
       { name: "High-School", path: "/high-school" },
-      { name: "Elementry-School", path: "/elementry-school" },
     ],
   },
   {

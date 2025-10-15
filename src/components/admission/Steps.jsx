@@ -19,44 +19,36 @@ const pillars = [
   },
   {
     id: 2,
-    title: "Submit Your Initial Application & Required Documents",
-    text: `The following documents must be uploaded for your application to be considered:.`,
+    title: "Testing & Payment of Testing Fee",
+    text: `Once documents are reviewed, your child will be scheduled for an entrance test.`,
     bullets: [
-      "Birth Certificate",
-      "Immunization Records",
-      "Parent(s) Government-Issued IDs",
-      "Most Recent Report Card (Elementary & Up)",
-      "State Test Scores (Elementary & Up)",
-      "High School Transcripts (If Applicable)",
+      "A non-refundable testing fee must be paid before the test date.",
+      "Testing slots fill quickly, so please complete this step promptly.",
     ],
     img: "/enrollement/step1.jpg",
   },
   {
     id: 3,
-    title: "Submit Your Initial Application & Required Documents",
-    text: `The following documents must be uploaded for your application to be considered:.`,
+    title: "Test Review & Admissions Decision",
+    text: `Our admissions committee will review your child’s performance holistically, including:`,
     bullets: [
-      "Birth Certificate",
-      "Immunization Records",
-      "Parent(s) Government-Issued IDs",
-      "Most Recent Report Card (Elementary & Up)",
-      "State Test Scores (Elementary & Up)",
-      "High School Transcripts (If Applicable)",
+      "Testing results",
+      "Academic history",
+      "Available space in the relevant grade",
     ],
+    para: "You’ll receive a decision notification shortly after the review process is completed.",
     img: "/enrollement/step1.jpg",
   },
   {
     id: 4,
-    title: "Submit Your Initial Application & Required Documents",
-    text: `The following documents must be uploaded for your application to be considered:.`,
+    title: "Acceptance, Final Enrolment & Registration Fee",
+    text: `If accepted, you will receive:`,
     bullets: [
-      "Birth Certificate",
-      "Immunization Records",
-      "Parent(s) Government-Issued IDs",
-      "Most Recent Report Card (Elementary & Up)",
-      "State Test Scores (Elementary & Up)",
-      "High School Transcripts (If Applicable)",
+      "An official Acceptance Letter",
+      "A detailed Final Enrolment Checklist",
     ],
+    para: "Complete the final registration process, including payment of the Registration Fee, to secure your child’s seat.",
+
     img: "/enrollement/step1.jpg",
   },
 ];
@@ -205,6 +197,10 @@ const Steps = () => {
                           </li>
                         ))}
                       </ul>
+
+                      <p className="text-xs sm:text-sm md:text-base text-gray-800 leading-relaxed mb-1">
+                        {pillar.para}
+                      </p>
                     </div>
                   </div>
                 </div>

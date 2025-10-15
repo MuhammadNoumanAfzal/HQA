@@ -47,8 +47,7 @@ const Hours = () => {
                 colSpan="2"
                 className="px-4 py-4 border-t border-gray-300 text-center italic"
               >
-                Please ensure students arrive on time each day to make the most
-                of their learning experience.
+                Extended Day Option: Until 5:00 PM (for working families)
               </td>
             </tr>
           </tbody>

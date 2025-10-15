@@ -19,44 +19,27 @@ const pillars = [
   },
   {
     id: 2,
-    title: "Submit Your Initial Application & Required Documents",
-    text: `The following documents must be uploaded for your application to be considered:.`,
-    bullets: [
-      "Birth Certificate",
-      "Immunization Records",
-      "Parent(s) Government-Issued IDs",
-      "Most Recent Report Card (Elementary & Up)",
-      "State Test Scores (Elementary & Up)",
-      "High School Transcripts (If Applicable)",
-    ],
+    title: "Application",
+    text: `Call to schedule placement testing in February (on weekends).Placements tests are scheduled on a first-come-first-served basis, and space is limited.   `,
+    bullets: [],
+    para: "The examination covers material from the student’s previous year. For example, a student applying for 3rd grade will be tested on end-of-2nd grade material. The placement test is ",
+    para2: "Note: There is a $30 placement testing fee per child.",
     img: "/enrollement/step1.jpg",
   },
   {
     id: 3,
-    title: "Submit Your Initial Application & Required Documents",
-    text: `The following documents must be uploaded for your application to be considered:.`,
-    bullets: [
-      "Birth Certificate",
-      "Immunization Records",
-      "Parent(s) Government-Issued IDs",
-      "Most Recent Report Card (Elementary & Up)",
-      "State Test Scores (Elementary & Up)",
-      "High School Transcripts (If Applicable)",
-    ],
+    title: "Principal Review",
+    text: `The Principal will review each student’s file and may request an interview with the student and parents. `,
+    bullets: [],
+    para: "Once the principal approves an application. You will then be notified by phone if your child passed and met the school requirements.",
     img: "/enrollement/step1.jpg",
   },
   {
     id: 4,
-    title: "Submit Your Initial Application & Required Documents",
-    text: `The following documents must be uploaded for your application to be considered:.`,
-    bullets: [
-      "Birth Certificate",
-      "Immunization Records",
-      "Parent(s) Government-Issued IDs",
-      "Most Recent Report Card (Elementary & Up)",
-      "State Test Scores (Elementary & Up)",
-      "High School Transcripts (If Applicable)",
-    ],
+    title: "Registration",
+    text: `When accepted, fill out the registration forms to guarantee your child’s seat or be placed on a waiting list. `,
+    bullets: [],
+    para: "Submit all documents via fax or in person.  Please note: in order to expedite your registration, submit all documents at once.   Incomplete application will not be processed.",
     img: "/enrollement/step1.jpg",
   },
 ];
@@ -205,6 +188,14 @@ const Steps = () => {
                           </li>
                         ))}
                       </ul>
+
+                      {/* Paragraph below bullets */}
+                      <p className="text-xs sm:text-sm md:text-base italic text-white mt-2">
+                        {pillar.para}
+                      </p>
+                      <p className="text-xs sm:text-sm md:text-base italic text-white mt-2">
+                        {pillar.para2}
+                      </p>
                     </div>
                   </div>
                 </div>

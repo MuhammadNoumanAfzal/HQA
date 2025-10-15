@@ -195,7 +195,7 @@ export default function FAQTabs({ data }) {
                 className={`px-12 py-2 rounded-md border text-sm sm:text-base font-medium transition-all ${
                   activeTab === tab
                     ? "bg-[#00285E] text-white border-[#00285E] shadow-lg"
-                    : "bg-white text-[#252626] border-gray-300 hover:bg-gray-100"
+                    : "bg-red-700 text-white border-gray-300 "
                 }`}
               >
                 {tab}

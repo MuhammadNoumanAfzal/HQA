@@ -16,7 +16,7 @@ export default function Vision() {
       aria-label="Hero - Houston Quran Academy"
       ref={ref}
       className="relative bg-cover bg-center flex justify-center items-center text-center min-h-[60vh] sm:min-h-[70vh] lg:min-h-[80vh] px-4 sm:px-6 md:px-10"
-      style={{ backgroundImage: "url('/about/campus.jpg')" }}
+      style={{ backgroundImage: "url('/about/slogan.jpg')" }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-white/70" aria-hidden="true" />

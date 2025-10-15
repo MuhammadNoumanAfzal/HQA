@@ -20,6 +20,16 @@ const images = [
   },
   {
     id: 2,
+    alt: "Elementary",
+    src: "/home/welcome4.jpg",
+
+    btn: "Elementary",
+    description:
+      "Building a strong academic foundation (TEKS-aligned) by integrating core subjects with Islamic values and initial Quran study.",
+    link: "/elementry-school",
+  },
+  {
+    id: 3,
     src: "home/welcome2.jpg",
     alt: "Middel School",
     btn: "Middel School",
@@ -28,22 +38,13 @@ const images = [
     link: "/middel-school",
   },
   {
-    id: 3,
+    id: 4,
     src: "home/welcome3.jpg",
     alt: "High School",
     btn: " High School",
     description:
       "A college-preparatory track (AP/Dual-Credit) focused on academic mastery and cultivating knowledgeable, balanced Muslim leaders for the future.",
     link: "/high-school",
-  },
-  {
-    id: 4,
-    src: "home/welcome4.jpg",
-    alt: "Elementary",
-    btn: "Elementary",
-    description:
-      "Building a strong academic foundation (TEKS-aligned) by integrating core subjects with Islamic values and initial Quran study.",
-    link: "/elementry-school",
   },
 ];
 

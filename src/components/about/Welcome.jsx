@@ -11,7 +11,7 @@ const Welcome = () => {
   const titleLetters = titleText.split("");
   const subtitleLetters = subtitleText.split("");
 
-  // Set up Intersection Observer 
+  // Set up Intersection Observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -46,7 +46,7 @@ const Welcome = () => {
   return (
     <section
       ref={sectionRef}
-      className="flex flex-col md:flex-row justify-between items-center w-full font-serif min-h-screen overflow-hidden py-12 px-10 gap-12"
+      className="flex flex-col md:flex-row justify-between items-center w-full font-serif min-h-screen overflow-hidden pb-12  pt-20 px-10 gap-12"
     >
       {/* Left Side */}
       <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
@@ -98,7 +98,6 @@ const Welcome = () => {
           commitment to spiritual growth. We believe that true education shapes
           the mind, nurtures the heart, and transforms lives.
           <br />
-          <br />
           Our story began with a vision to create a dynamic haven where the
           timeless wisdom of the Quran and the rigor of modern academics come
           together to empower tomorrow's leaders.
@@ -111,7 +110,7 @@ const Welcome = () => {
         <motion.img
           src="/about/bg.jpg"
           alt="Graduation caps"
-          className="h-64 sm:h-80 lg:h-120 w-full object-cover rounded-4xl"
+          className="h-64 sm:h-80 lg:h-100 w-full object-cover rounded-4xl"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={
             isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
